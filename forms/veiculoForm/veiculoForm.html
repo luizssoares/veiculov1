@@ -1,0 +1,1141 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+	<script type="text/javascript" src="dotacao.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>	
+	
+	
+	
+
+	
+	
+	
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+
+
+								<!--  <Hidden Dotação Orçamentária -->
+							<input type="hidden" name="codProjeto" id="codProjeto">
+							<input type="hidden" name="codAcao" id="codAcao">
+							<input type="hidden" name="codRecurso" id="codRecurso">  
+
+
+<!-- Cabeçalho -->
+
+									<div class="row" id="cabecalho">
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<div align="center" class="panel-title">
+													<h1><i class="flaticon flaticon-directions-car icon-lg" aria-hidden="true"></i>
+														Solicitação de Veículo</h1>
+												</div>	
+											</div>
+										</div>
+									</div>
+
+<!-- Aviso -->
+
+	<div class="paragraph-is-required system-message-information alert alert-warning" role="alert" id="alerta">Todos os campos com * são de preenchimento obrigatório.</div>
+			
+<!-- Painel Demandante -->
+											<input type="hidden" name="hd_numSuperior" id="numSuperior">
+											<input type="hidden" name="hdn_lastState" id="hdn_lastState">
+											<input type="hidden" name="hdn_State" id="hdn_State">
+											<input type="hidden" name="hdn_diretoria" id="hdn_diretoria">
+		
+	<div class="panel panel-primary" id="painelDemandante">
+		<div class="panel-heading">
+			<h3 class="panel-title"><i class="flaticon flaticon-person icon-sm" aria-hidden="true"></i> Demandante</h3>
+		</div>
+		<div class="panel-body">
+			<div class="form-group row">										
+							<div class="col-md-3" id="NomeSolicita">
+								<label for="cmb_NomeSolicitante">Nome Solicitante</label>
+								<select name="cmb_NomeSolicitante" id="cmb_NomeSolicitante" dataset="colleague" datasetkey="colleagueId" datasetvalue="colleagueName" class="form-control">
+								</select>
+							</div>
+							<div class="col-md-3" id="GerenteSolicita">
+								<label for="cmb_GerenteSolicitante">Gerente do Solicitante</label>
+								<input type="text" class="form-control" name="cmb_GerenteSolicitante" id="cmb_GerenteSolicitante" readonly>
+							</div>
+			
+							<div class="col-md-3" id="UnidadeSolicita">
+								<label for="zm_UnidadeSolicitante">Unidade Solicitante</label>
+								<input type="text" class="form-control" name="cmb_UnidadeSolicitante" id="cmb_UnidadeSolicitante" readonly>
+							</div>
+							<div class="col-md-2" id="dataSolic">
+								<label for="dataSolic"><i class="fluigicon fluigicon-calendar icon-xs" aria-hidden="true"></i>
+									Data da solicitação</label>
+								<input type="text" name="dataSolic" class="form-control">
+							</div>
+							<div class="form-group col-md-1">
+								<label for="processoUso">Nº Processo:</label>							
+								<input type="text" name="processoUso" id="processoUso" class="form-control" readonly>
+							</div>
+			</div>																												    
+								    <!-- <div class="col-md-6" id="cardInfo">
+								      <div class="panel panel-primary">
+								        <div class="panel-body">
+								          <div class="card" id=""cardInfo"">
+								            <div class="card-body">
+								              <h3 class="card-title">
+								                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+								                <lord-icon src="https://cdn.lordicon.com/wdqztrtx.json" trigger="loop" colors="primary:#FF0000" style="width: 25px; height: 25px; padding-top: 4px;"></lord-icon>
+								                Observação:
+								              </h3>
+								              <ul>
+								                <div id="ad">
+								                  <li><strong><u>A NOTA FISCAL E CONTRATO DE LOCAÇÃO SE ENCONTRAM EM ANEXO!</u></strong></li>
+								                </div>
+								              </ul>
+								            </div>
+								          </div>
+								        </div>
+								      </div>
+								    </div> -->							    																																						
+			</div>
+	</div>	
+	
+
+<!-- Painel da Dotação Orçamentária -->
+
+
+						<div class="panel panel-success" id="painel_dotacao">
+						    <div class="panel-heading">
+						        <h3 class="panel-title"><i class="flaticon flaticon-monetization-on icon-sm" aria-hidden="true"></i> Dotação Orçamentária</h3>
+						    </div>
+						    <div class="panel-body">
+						        <div class="row">
+								    <div class="col-md-6">
+								      <div class="panel panel-primary">
+								        <div class="panel-body">								          
+											<div>																																						
+														<div class="form-group row">
+														<div>
+															<div style="display: none;">
+																	<label class="control-label" for="txt_projeto">Projeto:</label>
+																	<span class="required text-danger"><strong>*</strong></span>
+																	<input 
+																		type="zoom"
+																		class="form-control"
+																		id="txt_projeto"
+																		name="txt_projeto"
+																		data-zoom="{
+																			'displayKey':'NOME',
+																			'datasetId':'dsprojeto',
+																			'maximumSelectionLength':'1',
+																			'placeholder':'Escolha o projeto',
+																			'fields':[
+																				{   'field':'CODCCUSTO', 
+																					'label':'CODCCUSTO' 
+																				},
+																				{   'field':'NOME', 
+																					'label':'NOME', 
+																					'standard':'true' 
+																				}
+																			]
+																		}"
+																	>
+																	<input type="hidden" name="txt_codprojeto" id="txt_codprojeto">
+																	</div>
+																	<div id="projetov" style="display: d;"></div> 
+																	</div>
+																	<div>
+																		<div style="display: none;">
+																		<label class="control-label" for="txt_acao">Ação:</label>
+																		<span class="required text-danger"><strong>*</strong></span>
+																		<input 
+																			type="zoom"
+																			class="form-control"
+																			id="txt_acao"
+																			name="txt_acao"
+																			data-zoom="{
+																				'displayKey':'NOME',
+																				'datasetId':'dsacao',
+																				'maximumSelectionLength':'1',
+																				'placeholder':'Escolha a ação',
+																				'fields':[
+																					{   'field':'CODACAO', 'label':'CODACAO' },
+																					{ 'field':'NOME', 'label':'NOME', 'standard':'true' }
+																				]
+																			}"
+																		>
+																		<input type="hidden" name="txt_codacao" id="txt_codacao">
+																	</div>
+																	<div id="acaov" style="display: d;"></div>
+																</div>													
+																<div>
+																	<div style="display: none;">
+																	<label class="control-label" for="txt_recursos">Unidade:</label>
+																	<span class="required text-danger"><strong>*</strong></span>
+																	<input 
+																		type="zoom"
+																		class="form-control"
+																		id="txt_recursos"
+																		name="txt_recursos"
+																		data-zoom="{
+																			'displayKey':'NOME',
+																			'datasetId':'dsunidade',
+																			'maximumSelectionLength':'1',
+																			'placeholder':'Escolha o recurso',
+																			'fields':[ 
+																				{ 'field':'CODUNIDADE', 'label':'CODUNIDADE' },
+																				{ 'field':'NOME', 'label':'NOME', 'standard':'true' }
+																			]
+																		}"
+																	></div>
+																	<div id="unidadev" style="display: d;"></div>
+																</div>					
+														</div>																																													
+										</div>								
+								        </div>
+								      </div>
+								    </div>									
+								    <div class="col-md-6" id="cardDemandante">
+								      <div class="panel panel-primary">
+								        <div class="panel-body">
+								          <div class="card" id="cardDemandante">
+								            <div class="card-body">
+								              <h3 class="card-title">
+								                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+								                <lord-icon src="https://cdn.lordicon.com/wdqztrtx.json" trigger="loop" colors="primary:#FF0000" style="width: 25px; height: 25px; padding-top: 4px;"></lord-icon>
+								                Observação:
+								              </h3>
+								              <ul>
+								                <div id="ad">
+								                  <li><strong><u>Preencha com atenção os CAMPOS da DOTAÇÃO ORÇAMENTÁRIA!</u></strong></li>							                  
+								                </div>
+								              </ul>
+								            </div>
+								          </div>
+								        </div>
+								      </div>
+								    </div>								    								    
+								  </div>														        
+						    </div>
+						</div>
+
+<!-- Painel Escolha do Usuário-->
+
+				<div class="panel panel-primary" id="painel_usuario">
+				    <div class="panel-heading">
+				        <h3 class="panel-title"><i class="fluigicon fluigicon-user-search icon-sm" aria-hidden="true"></i>
+				            Painel de Escolha</h3>
+				    </div>
+					    <div class="panel-body">
+					        <div class="form-group row">
+					            <div class="col-md-5">
+					                <label for="escolhaPainel">Escolha o tipo de veículo:</label>
+					                <span class="required text-danger">
+						                    <strong>*</strong>
+						                </span>
+					                <div>
+					                    <select name="escolhaPainel" id="escolhaPainel">
+					                        <option value="">Selecione</option>
+					                        <option value="painelViagem">Alugar Carro ou Usar Veículo Próprio do Sebrae</option>
+					                        <option value="painelViagem2">Alugar Micro-ônibus, Van ou Ônibus</option>
+					                    </select>
+					                </div>
+					            </div>
+					        </div>
+					        <!-- Campo oculto para armazenar a escolha do usuário -->
+					        <input type="hidden" name="escolhaField" id="escolhaField" value="">
+					    </div>
+				</div>
+
+
+
+<!-- Painel Alugar Carro ou Carro Próprio -->
+
+	<div class="panel panel-primary" id="painelViagem">
+	<div class="panel-heading">
+		<h3 class="panel-title"><i class="flaticon flaticon-message-question icon-sm" aria-hidden="true"></i> Aluguel de carro ou solicitação de veículo próprio</h3>
+	</div>
+	
+	<div class="form-group row">
+		<div class="col-md-12">					
+					<div class="panel-body">
+								<div class="form-group row">
+									<div class="col-md-6" id="cardAluguel">								      								        
+								          <div class="card">
+								            <div class="card-body">
+								              <h3 class="card-title">
+								                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+								                <lord-icon src="https://cdn.lordicon.com/wdqztrtx.json" trigger="loop" colors="primary:#FF8C00" style="width: 25px; height: 25px; padding-top: 4px;"></lord-icon>
+								                Em caso de aluguel, LEIA COM ATENÇÃO!
+								              </h3>
+								              <ul>
+								                <div id="ad">
+								                  <li><strong><u>Insira apenas DIÁRIAS COMPLETAS, e caso haja horas, estas serão CONSIDERADAS COMO UM DIA ADICIONAL NA DIÁRIA. 
+								                  </u></strong></li>
+								                  <ol>
+								                    <li>Por exemplo, se o usuário reservar 2 diárias e 2 horas, isso será registrado como 3 diárias no total.</li>
+								                    <li>Preencha corretamente os campos 'Data e hora de Saída' e 'Data e Hora de Retorno'.</li>
+								                    <li>Logo abaixo desses campos, você consegue acompanhar a diária exata e o valor total do aluguel.</li>
+								                  </ol>							                  
+								                </div>
+								              </ul>
+								            </div>
+								          </div>						      
+								    </div>
+								    
+								 </div>   		
+					
+					
+						<div class="form-group row">													
+					    	<div class="form-group col-md-3">
+								<label for="condutor">Nome do Condutor</label>
+									<span class="required text-danger">
+					                    <strong>*</strong>
+					                </span>
+								<input type="text" name="condutor" id="condutor" class="form-control" placeholder="Nome completo">
+							</div>
+							 <div class="form-group col-md-2">
+								<label for="numCnh">Nº CNH</label>
+									<span class="required text-danger">
+				                    <strong>*</strong>
+				               		</span>
+								<input type="text" name="numCnh" id="numCnh" class="form-control" mask="0000000000" placeholder="Somente números">
+							</div>
+							<div class="form-group col-md-2">
+								<label for="validadeCnh">Validade da CNH</label>
+									<span class="required text-danger">
+				                    <strong>*</strong>
+				               		</span>
+								<input type="text" name="validadeCnh" id="validadeCnh" class="form-control" mask="00/00/0000" placeholder="Somente números">
+							</div>
+							
+							<div class="form-group col-md-1" id="processo1">
+								<label for="processo">Nº Processo</label>
+									<span class="required text-danger">
+					                    <strong>*</strong>
+					                </span>
+								<input type="text" name="processo" id="processo" class="form-control" readonly>
+							</div>																										
+						</div>																							
+						<div class="form-group row">										
+							<div class="col-md-5">
+				                <label for="carroOpcao">Carro Alugado ou Próprio?</label>
+				                <span class="required text-danger">
+				                    <strong>*</strong>
+				                </span>
+				                <div>
+				                    <select name="carroOpcao" id="carroOpcao">
+				                    	<option value="">Selecione</option>
+				                        <option value="proprio">Próprio</option>
+				                        <option value="alugado">Alugado</option>
+				                    </select>
+				                </div>
+				            </div>
+				        </div>    				
+					<!--CARRO PRÓPRIO-->	
+						<div class="row">
+								<div class="col-md-2" id="d1">
+									<label>CARRO</label>
+									<select name="tipoCarro" id="tipoCarro" class="form-control" dataset="dsCarroSede" datasetkey="Carro" datasetvalue="Carro"></select>
+								</div>
+					<!--PLACA-->												
+								<div class="col-md-1" id="d2">	
+									<label>PLACA</label>
+									<div class="input-group">
+										<input class="form-control" type="text" readonly
+											name="tipoPlaca" id="tipoPlaca">
+									</div>
+								</div>							
+					<!--GRUPO PERTECENTE-->
+								<div class="col-md-1" id="d3">
+									<label >GRUPO</label>
+									<div class="input-group">
+										<input class="form-control" type="text" readonly
+											name="tipoGrupo" id="tipoGrupo">
+									</div>
+								</div>
+							</div>	
+							
+					<!-- datas de saída e retorno (VEIC.PRÓPRIO) -->
+					
+<!-- n mexer -->		<div class="form-group row"></div>
+
+						<div class="row">				
+							<div id="d5">	
+								<div class="col-md-2 input-default">
+									<label for="dat_DataSaidapp" class= "label label-primary">Data de Saída</label>
+									<span class="required text-danger">
+					                    <strong>*</strong>
+					                </span>
+									<input type="date" class="form-control" name="dat_DataSaidapp" id="dat_DataSaidapp">
+								</div>
+							</div>
+							<div id="d6">
+								<div class="col-md-2 input-default">
+									<label for="dat_DataRetornopp" class= "label label-primary">Data de Retorno</label>
+									<span class="required text-danger">
+					                    <strong>*</strong>
+					                </span>
+									<input type="date" class="form-control" name="dat_DataRetornopp" id="dat_DataRetornopp">
+								</div>
+							</div>
+							 
+						</div>	
+												
+						<!--ALUGA VEICULO-->
+																	
+						<div class="form-group row" id="z">
+						    <div class="col-md-2" id="">
+						        <label>CARRO</label>
+						        <select name="carroAlugado" id="carroAlugado" class="form-control" dataset="dsAluguel" datasetkey="Veiculo" datasetvalue="Veiculo"></select>
+						    </div>
+						    <div class="col-md-1" id="x">    
+						        <label>DIÁRIA</label>
+						        <div class="input-group">
+						            <input class="form-control" type="text" readonly name="qtDia" id="qtDia">
+						        </div>
+						    </div>
+						</div>
+						
+						<div class="form-group row">
+						    <div class="col-md-2 input-default" id="c">
+						        <label for="dat_DataSaida" class="label label-primary">Data e Hora de Saída</label>
+						        <span class="required text-danger">
+						            <strong>*</strong>
+						        </span>
+						        <input type="datetime-local" class="form-control" name="dat_DataSaida" id="dat_DataSaida">
+						    </div>
+						    <div class="col-md-2 input-default" id="v">
+						        <label for="dat_DataRetorno" class="label label-primary">Data e Hora de Retorno</label>
+						        <span class="required text-danger">
+						            <strong>*</strong>
+						        </span>
+						        <input type="datetime-local" class="form-control" name="dat_DataRetorno" id="dat_DataRetorno">
+						    </div>
+						</div>
+ 						<div id="resultado"></div> 																					
+						
+<!-- n mexer -->		<div class="form-group row"></div>
+						
+						<div class="form-group row">						
+							<div class="form-group col-md-2">
+								<label for="destino">Destino</label>
+									<span class="required text-danger">
+					                    <strong>*</strong>
+					                </span>
+								<input type="text" name="destino" id="destino" class="form-control" placeholder="Destino completo">
+							</div>
+						
+							<div class="col-md-2">								
+								<label>Estimativa de consumo de combustível:</label>								
+								<input id="gas" name="gas" onkeyup="gasolina(this);" /><br/>
+							</div>
+						</div>
+						<div class="form-group row">	
+							<div class="col-md-4">
+								<div class="form-group" id="justificativa">
+									<label for="justificativa">Justificativa:</label>
+									<span class="required text-danger">
+					                    <strong>*</strong>
+					                </span>
+									<textarea class="form-control" id="justificativa" name="justificativa" rows="6" cols="20"></textarea>
+								</div>
+							</div>
+						</div>																																						
+					</div>						
+		</div>
+	</div>			
+</div>
+
+<!-- Painel Van / Micro / Onibus Leito / Onibus SL  -->
+
+
+			<div class="panel panel-primary" id="painelViagem2">
+			    <div class="panel-heading">
+			        <h3 class="panel-title">
+			            <i class="flaticon flaticon-news icon-sm" aria-hidden="true"></i>
+			            Aluguel de micro-ônibus, van, ônibus leito ou semi leito
+			        </h3>
+			    </div>
+			    <div class="panel-body">
+			        <div class="form-group row">										
+			            <div class="col-md-5">
+			                <label for="carropesado">Selecione o tipo de veículo</label>
+			                <span class="required text-danger"></span>
+			                <div>
+			                    <select name="carropesado" id="carropesado">
+			                        <option value="">Selecione</option>
+			                        <option value="van">Van</option>
+			                        <option value="micro">Micro-ônibus</option>
+			                        <option value="onibusL">Ônibus Leito</option>
+			                        <option value="onibusSL">Ônibus Semi Leito</option>
+			                    </select>
+			                </div>
+			            </div>
+			        </div>		       			      			       			        			        
+			        <div class="form-group row" id="vanCampos" >
+			            <div class="col-md-3">
+			                <label for="lugar">Lugar</label>
+			                	<select name="lugarVan" id="lugarVan" class="form-control" dataset="dsVanAluguel" datasetkey="Lugar" datasetvalue="Lugar"></select>					             
+			             </div>
+			             <div class="col-md-2">
+			                <label>Diária da Van</label>
+			                <div>
+			                    R$ <input type="text" name="tipoDiariaVan" id="tipoDiariaVan" readonly>
+			                </div>
+			            </div>
+			          </div>
+			          
+			          <div class="form-group row" id="microCampos">
+			            <div class="col-md-3">
+			                <label>Lugar</label>
+			                	<select name="lugarMicro" id="lugarMicro" class="form-control" dataset="dsMicroAluguel" datasetkey="Lugar" datasetvalue="Lugar"></select>					             
+			             </div>
+			             <div class="col-md-2">
+			                <label for="tipoDiariaMicro">Diária do Micro-ônibus</label>
+			                <div>
+			                    R$ <input type="text" name="tipoDiariaMicro" id="tipoDiariaMicro" readonly>
+			                </div>
+			            </div>
+			          </div> 
+			          
+			          <div class="form-group row" id="onibusLCampos">
+			            <div class="col-md-3">
+			                <label>Lugar</label>
+			                	<select name="lugarOnibusL" id="lugarOnibusL" class="form-control" dataset="dsOnibusLAluguel" datasetkey="Lugar" datasetvalue="Lugar"></select>				             
+			             </div>
+			             <div class="col-md-2">
+			                <label for="tipoDiariaOnibusL">Diária do Ônibus Leito</label>
+			                <div>
+			                    R$ <input type="text" name="tipoDiariaOnibusL" id="tipoDiariaOnibusL" readonly>
+			                </div>
+			            </div>
+			          </div> 
+			          
+			          <div class="form-group row" id="onibusSLCampos">
+			            <div class="col-md-3">
+			                <label>Lugar</label>
+			                	<select name="lugarOnibusSL" id="lugarOnibusSL" class="form-control" dataset="dsOnibusSLAluguel" datasetkey="Lugar" datasetvalue="Lugar"></select>					             
+			             </div>
+			             <div class="col-md-2">
+			                <label for="tipoDiariaOnibusSL">Diária do Ônibus Semi Leito</label>
+			                <div>
+			                    R$ <input type="text" name="tipoDiariaOnibusSL" id="tipoDiariaOnibusSL" readonly>
+			                </div>
+			            </div>
+			          </div>   		            
+			            <div class="row">				
+							<div>	
+								<div class="col-md-2 input-default">
+									<label for="dat_DataSaida2" class= "label label-primary">Data de Saída</label>
+									<span class="required text-danger">
+					                    <strong>*</strong>
+					                </span>
+									<input type="datetime-local" class="form-control" name="dat_DataSaida2" id="dat_DataSaida2">
+								</div>
+							</div>
+							<div>
+								<div class="col-md-2 input-default">
+									<label for="dat_DataRetorno2" class= "label label-primary">Data de Retorno</label>
+									<span class="required text-danger">
+					                    <strong>*</strong>
+					                </span>
+									<input type="datetime-local" class="form-control" name="dat_DataRetorno2" id="dat_DataRetorno2">
+								</div>
+							</div>
+							 
+						</div>
+			               				
+					<div id="resultado2"></div>				
+					<div class="form-group row"></div>
+					
+					<div class="row">
+						<div class="col-md-3">
+							<label for="destinoMVO">Destino</label>
+								<span class="required text-danger">
+								<strong>*</strong>
+								</span>
+							<input type="text" name="destinoMVO" id="destinoMVO" class="form-control">
+						</div>
+					</div>
+					<div class="row">	
+							<div class="col-md-4">
+								<div class="form-group" id="trajeto">
+									<label for="justificativa">Trajeto Detalhado:</label>
+									<span class="required text-danger">
+					                    <strong>*</strong>
+					                </span>
+									<textarea class="form-control" id="trajeto" name="trajeto" rows="6" cols="20" 
+									placeholder="Ex: BR-174, KM 95, RAMAL DO JOÃOZINHO. MAIS 20KM DE RAMAL DE BARRO, ATÉ CHEGAR NA COMUNIDADE SÃO JOÃO"></textarea>
+									
+								</div>
+							</div>
+						</div> 
+
+			         </div>					      
+			    </div>										
+
+<!-- Painel de Avaliação -->
+
+						<div class="panel panel-primary" id="painel_avaliacao">
+							<div class="panel-heading">
+								<h3 class="panel-title"><i class="flaticon flaticon-star-active icon-sm" aria-hidden="true"></i> Avaliação</h3>
+							</div>
+							<div class="panel-body">
+								
+								<div class="form-group row">
+									<div class="col-md-3">
+								          <div class="card">
+								            <div class="card-body">
+								              <ul>
+								                <div aligh="right" id="avalCard">
+								                  <li><strong><u>No campo de observações:</u></strong></li>
+								                  <ol>
+								                    <li>Quaisquer melhorias;</li>
+								                    <li>Quaisquer críticas;</li>
+								                    <li>Quaisquer elogios.</li>
+								                  </ol>
+								                </div>
+								              </ul>
+								            </div>
+								          </div>
+								      </div>
+								     <div class="form-group col-md-2" id="dataAval">
+											<label for="dataAval"><i class="fluigicon fluigicon-calendar icon-xs" aria-hidden="true"></i>
+											Data da avaliação</label>
+												<input type="text" name="dataAval" class="form-control" readonly>
+									</div>								      
+								  </div>			    										
+								<div class=" form-group row">
+									<div class="col-md-3">
+										<div class="form-group" id="obs">			
+											<label for="requisitante"><i class="fluigicon fluigicon-user-comment icon-sm" aria-hidden="true"></i>
+											Observações</label>
+											<span class="required text-danger">
+											<strong>*</strong>
+											</span>
+											<textarea class="form-control" id="obs" name="obs" rows="6" cols="5"></textarea>
+										</div>
+									</div>																																						
+									<div class="col-md-2">
+									    <label for="aval"><i class="fluigicon fluigicon-user-selection icon-sm" aria-hidden="true"></i> Avaliação do Processo</label>
+									    <span class="required text-danger">
+									        <strong>*</strong>
+									    </span>
+									    <select name="aval" id="avalSelect">
+									    	<option value="0">Selecione</option>
+									        <option value="1" data-color="green">Excelente</option>
+									        <option value="2" data-color="blue">Bom</option>
+									        <option value="3" data-color="gray">Neutro</option>
+									        <option value="4" data-color="orange">Ruim</option>
+									        <option value="5" data-color="red">Péssimo</option>
+									    </select>
+									</div>
+								</div>
+						</div>
+					</div>			
+
+<!-- Painel decisão USO -->
+
+				<div class="panel panel-primary" id="painelDecisaoUso">
+				    <div class="panel-heading">
+				        <h3 class="panel-title"><i class="flaticon flaticon-user-search icon-sm" aria-hidden="true"></i> Decisão da USO</h3>
+				    </div>
+				    <div class="panel-body">
+				        <div class="form-group row">
+				            <div class="col-md-5">
+				                <label for="escolhaPainelUso">Escolha o tipo de aluguel solicitado:</label>
+				                <div>
+				                    <select name="escolhaPainelUso" id="escolhaPainelUso">
+				                        <option value="">Selecione</option>
+				                        <option value="painelUso">Alugar Carro</option>
+				                        <option value="painelUso2">Alugar Micro-ônibus, Van ou Ônibus</option>
+				                    </select>
+				                </div>
+				            </div>
+				        </div>
+				        <!-- Campo oculto para armazenar a escolha da USO -->
+				        <input type="hidden" name="escolhaField2" id="escolhaField2" value="">
+				    </div>
+				</div>
+
+<!-- Painel USO (ALUGAR VAN/ONIBUS/MICRO) -->
+
+								<div class="panel panel-primary" id="painelUso2">
+								    <div class="panel-heading">
+								        <h3 class="panel-title"><i class="flaticon flaticon-airport-shuttle icon-sm" aria-hidden="true"></i>
+								         Unidade de Suporte Operacional - USO</h3>
+								    </div>
+								    <div class="panel-body">
+								    							        
+							        	<div class="form-group col-md-2">
+											<label for="carroPesadoUso">Tipo de Veículo:</label>
+											<input type="text" name="carroPesadoUso" id="carroPesadoUso" class="form-control" readonly>
+										</div>
+										<div class="form-group col-md-2">
+											<label for="lugarPesadoUso">Lugar:</label>
+											<input type="text" name="lugarPesadoUso" id="lugarPesadoUso" class="form-control" readonly>
+										</div>	
+										<div class="form-group col-md-2">
+											<label for="destinoPesadoUso">Destino:</label>
+											<input type="text" name="destinoPesadoUso" id="destinoPesadoUso" class="form-control" readonly>
+										</div>	
+										
+										
+										
+									<div class="form-group row">
+									    <div class="col-md-2 input-default">
+									        <label for="dataRetiradaPesadoUso" class="label label-primary">Retirada do Veículo</label>
+									        <input type="datetime-local" class="form-control" name="dataRetiradaPesadoUso" id="dataRetiradaPesadoUso" readonly>
+									    </div>
+									    <div class="col-md-2 input-default">
+									        <label for="dataRetornoPesadoUso" class="label label-primary">Devolução do Veículo</label>
+									        <input type="datetime-local" class="form-control" name="dataRetornoPesadoUso" id="dataRetornoPesadoUso" readonly>
+									    </div>
+									</div>
+									
+									<div class="row">	
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="justificativa">Trajeto Detalhado:</label>
+												<span class="required text-danger">
+								                    <strong>*</strong>
+								                </span>
+												<textarea class="form-control" id="trajetoPesadoUso" name="trajetoPesadoUso" rows="6" cols="20" readonly 
+												></textarea>												
+											</div>
+										</div>
+									</div> 
+									
+									<div class="form-group row">	
+											<div class="col-md-5">
+												<label for="mail">E-mail da locadora:</label>												
+												<input type="text" name="mail2" id="mail2" class="form-control">
+											</div>
+																																																															
+											<div class="col-md-5">
+												<label for="linkAcesso">link de acesso</label>												
+												<input type="text" name="linkAcesso2" id="linkAcesso2" class="form-control">
+											</div>
+											
+										</div>
+									
+									
+									
+											
+							        
+								    </div>
+								</div>
+
+
+<!-- Painel USO (ALUGAR CARRO) -->
+
+
+							<div class="panel panel-primary" id="painelUso">
+							    <div class="panel-heading">
+							        <h3 class="panel-title"><i class="flaticon flaticon-build icon-sm" aria-hidden="true"></i> Unidade de Suporte Operacional - USO</h3>
+							    </div>
+							    <div class="panel-body">	
+							    	<div class="form-group row">							    						  						    							    							    	
+								    	<div class="form-group col-md-3">
+											<label for="condutorUSO">Condutor:</label>
+												<span class="required text-danger">
+								                    <strong>*</strong>
+								                </span>
+											<input type="text" name="condutorUSO" id="condutorUSO" class="form-control" readonly>
+										</div>
+										 <div class="form-group col-md-2">
+											<label for="numCnhUSO">CNH:</label>
+												<span class="required text-danger">
+							                    <strong>*</strong>
+							               		</span>
+											<input type="text" name="numCnhUSO" id="numCnhUSO" class="form-control" readonly>
+										</div>										
+										<div class="form-group col-md-2">
+											<label for="cnhVali">Validade CNH:</label>
+												<span class="required text-danger">
+								                    <strong>*</strong>
+								                </span>
+											<input type="text" name="cnhVali" id="cnhVali" class="form-control" mask="00/00/0000" readonly>
+										</div>																																							
+									</div>								    
+						    	<div class="form-group row">						    	
+								        <div class="col-md-3" id="usoAlugado">
+									        <label>CARRO</label>
+										       <span class="required text-danger">
+								               <strong>*</strong>
+								               </span>
+								               	<input type="text" name="carroAlugadoUSO" id="carroAlugadoUSO" class="form-control" readonly>								       
+									    </div>
+									    <div class="form-group col-md-2">
+											<label for="destinoUso">Destino</label>
+												<span class="required text-danger">
+								                    <strong>*</strong>
+								                </span>
+											<input type="text" name="destinoUso" id="destinoUso" class="form-control" readonly>
+										</div>
+									    <div class="form-group col-md-2">
+											<label for="numDiarias">Nº de Diárias</label>
+												<span class="required text-danger">
+							                    <strong>*</strong>
+							               		</span>
+											<input type="text" name="numDiarias" id="numDiarias" class="form-control" mask="00">
+										</div>
+										<div class="form-group col-md-2">
+										    <label for="numCartao">Cartão</label>
+										    <span class="required text-danger"><strong>*</strong></span>
+										    <input type="text" name="numCartao" id="numCartao" class="form-control" placeholder="Ex: COR-1234" oninput="formatCartao(this)">
+										</div>										 									
+									</div>
+									
+									<div class="form-group row">
+									    <div class="col-md-2 input-default" id="">
+									        <label for="dataRetiradaFinal" class="label label-primary">Retirada do Veículo</label>
+									        <span class="required text-danger">
+									            <strong>*</strong>
+									        </span>
+									        <input type="datetime-local" class="form-control" name="dataRetiradaFinal" id="dataRetiradaFinal" readonly>
+									    </div>
+									    <div class="col-md-2 input-default" id="">
+									        <label for="dataRetornoFinal" class="label label-primary">Devolução do Veículo</label>
+									        <span class="required text-danger">
+									            <strong>*</strong>
+									        </span>
+									        <input type="datetime-local" class="form-control" name="dataRetornoFinal" id="dataRetornoFinal" readonly>
+									    </div>
+									</div>
+									
+										<div class="form-group row">	
+											<div class="col-md-5">
+												<label for="mail">E-mail da locadora:</label>												
+												<input type="text" name="mail" id="mail" class="form-control">
+											</div>
+																																																															
+											<div class="col-md-5">
+												<label for="linkAcesso">link de acesso</label>												
+												<input type="text" name="linkAcesso" id="linkAcesso" class="form-control">
+											</div>											
+										</div>
+										
+										
+									
+							    </div>
+							</div>
+
+<!-- Painel USO (CARRO PROPRIO) -->
+
+
+							 <div class="panel panel-primary" id="painelUsoProprio">
+							    <div class="panel-heading">
+							        <h3 class="panel-title"><i class="flaticon flaticon-build icon-sm" aria-hidden="true"></i> Unidade de Suporte Operacional - USO</h3>
+							    </div>
+							    <div class="panel-body">
+							    	<div class="form-group row">
+								    	<div class="form-group col-md-3">
+											<label for="condutorUSO2">Condutor:</label>
+												<span class="required text-danger">
+								                    <strong>*</strong>
+								                </span>
+											<input type="text" name="condutorUSO2" id="condutorUSO2" class="form-control" readonly>
+										</div>
+										 <div class="form-group col-md-2">
+											<label for="numCnhUSO2">CNH:</label>
+												<span class="required text-danger">
+							                    <strong>*</strong>
+							               		</span>
+											<input type="text" name="numCnhUSO2" id="numCnhUSO2" class="form-control" readonly>
+										</div>																										
+									</div>		
+							    
+							    	<div class="form-group row">
+							    		<div class="col-md-2" id="usoSede">
+											<label>CARRO</label>
+											<select name="usoSede" id="usoSede" class="form-control" dataset="dsCarroSede" datasetkey="Carro" datasetvalue="Carro"></select>
+										</div>								    
+									    <div class="form-group col-md-1">
+											<label for="numDiarias2">Nº de Diárias</label>
+												<span class="required text-danger">
+							                    <strong>*</strong>
+							               		</span>
+											<input type="text" name="numDiarias2" id="numDiarias2" class="form-control" mask="00">
+										</div> 
+										
+										<div class="form-group col-md-1">
+										    <label for="numCartao2">Cartão</label>
+										    <span class="required text-danger"><strong>*</strong></span>
+										    <input type="text" name="numCartao2" id="numCartao2" class="form-control" placeholder="Ex: COR-1234" oninput="formatCartao(this)">
+										</div>
+									</div>
+									
+									<div class="form-group row">
+										<div class="col-md-2 input-default">
+											<label for="dataRetiradaFinal2" class= "label label-primary">Retirada do Veículo</label>										
+											<input type="date" class="form-control" name="dataRetiradaFinal2" id="dataRetiradaFinal2" readonly>
+										</div>
+										<div class="col-md-2 input-default">
+											<label for="dataRetornoFinal2" class= "label label-primary">Devolução do Veículo</label>											
+											<input type="date" class="form-control" name="dataRetornoFinal2" id="dataRetornoFinal2" readonly>
+										</div>								   
+									</div>																							
+							    </div>
+							</div> 
+
+
+<!-- Painel Locadora (ALUGAR CARRO) -->
+
+										<div class="panel panel-primary" id="painel_locadora">
+										    <div class="panel-heading">
+										        <h3 class="panel-title"><i class="flaticon flaticon-company icon-sm" aria-hidden="true"></i> Locadora de Veículos</h3>
+										    </div>
+										    <div class="panel-body">
+										        <div class="panel panel-primary col-md-5">
+								        <div class="panel-body">
+								        <div class="form-group row">
+									          <div class="card" id="cardLocadora">
+									            <div class="card-body">
+									              <h3 class="card-title">
+									                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+									                <lord-icon src="https://cdn.lordicon.com/wdqztrtx.json" trigger="loop" colors="primary:#FF0000" style="width: 25px; height: 25px; padding-top: 4px;"></lord-icon>
+									                Observação:
+									              </h3>
+									              <ul>
+									                <div id="ad">
+									                  <li><strong><u>Por gentileza, preencher corretamente os campos abaixo:</u></strong></li>									                  
+									                </div>
+									              </ul>
+									            </div>
+									          </div>
+								         </div>   
+								         <div class="form-group row">
+										    <div class="col-md-5 input-default">
+										        <label for="carroLiberado" class="label label-primary">Carro Liberado</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="text" class="form-control" name="carroLiberado" id="carroLiberado" placeholder="Ex: Gol, Uno, S10">
+										    </div>
+										    <div class="col-md-5 input-default">
+										        <label for="placaLiberado" class="label label-primary">Placa do Carro</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="text" class="form-control" name="placaLiberado" id="placaLiberado" placeholder="Padrão: 000-0000">
+										    </div>
+										</div>	
+								               
+								      
+										<div class="form-group row">
+										    <div class="col-md-5 input-default">
+										        <label for="datahorarioLocadora" class="label label-primary">Data e Hora da Saída</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="datetime-local" class="form-control" name="datahorarioLocadora" id="datahorarioLocadora">
+										    </div>
+										    <div class="col-md-5 input-default">
+										        <label for="datahorarioLocadora2" class="label label-primary">Data e Hora do Retorno</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="datetime-local" class="form-control" name="datahorarioLocadora2" id="datahorarioLocadora2">
+										    </div>
+										</div>
+										
+										<div class="form-group row">
+										    <div class="col-md-5 input-default">
+										        <label for="localRetirada" class="label label-primary">Local da retirada do veículo</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="text" class="form-control" name="localRetirada" id="localRetirada" placeholder="Endereço da Locadora, Sebrae-SEDE">
+										    </div>
+										    <div class="col-md-5 input-default">
+										        <label for="localRetorno" class="label label-primary">Local do retorno do veículo</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="text" class="form-control" name="localRetorno" id="localRetorno" placeholder="Endereço da Locadora, Sebrae-SEDE">
+										    </div>
+										</div>			       
+								        </div>
+								      </div>
+										    </div>
+										</div>
+
+
+<!-- Painel Locadora (ALUGAR VAN/MICRO/ONIBUS) -->
+
+			<div class="panel panel-primary" id="painel_locadora2">
+			    <div class="panel-heading">
+			        <h3 class="panel-title"><i class="flaticon flaticon-company icon-sm" aria-hidden="true"></i> Locadora de Veículos (VAN/MICRO/ÔNIBUS) </h3>
+			    </div>
+			    <div class="panel-body">
+			        Panel content
+			    </div>
+			</div>
+
+<!-- Painel de  adição de diárias -->
+				
+					<div class="panel panel-primary" id="painelDiarias">
+					    <div class="panel-heading">
+					        <h3 class="panel-title"><i class="flaticon flaticon-circle-plus icon-sm" aria-hidden="true"></i>
+					         Necessita de mais diárias?</h3>
+					    </div>
+					    <div class="panel-body">
+					    	<div class="form-group row">					        				               
+								<div class="col-md-3">
+									<div>
+										<label>Selecione:</label>
+									</div> 	
+						            <select name="maisDiariasSelect" id="maisDiariasSelect">
+						                <option value=""></option>
+						                <option value="nao">NÃO</option>
+						                <option value="sim">SIM</option>
+						            </select>		               
+						        </div>
+					        </div> 
+					        <div class="form-group row">
+						        <div class="col-md-2" id="qtdMaisDiaria">
+						        	<div>
+									<label for="qtdMaisDiaria">Digite quantas diárias a mais será necessário:</label>
+									</div>
+									<input type="text" name="qtdMaisDiaria1" id="qtdMaisDiaria1" class="form-control" mask="00" placeholder="Somente números">
+						        </div>
+					        </div>
+					    </div>
+					    
+					    ------- Disparo do email p/ locadora
+					</div>
+					
+								
+</form>
+</div>
+</body>	
+		
+				<script>
+					$(document).ready(function () {
+					    $("#vanCampos, #microCampos, #onibusLCampos, #onibusSLCampos").hide();
+				
+					    $("#carropesado").change(function () {
+					        var selectedCarro = $(this).val();
+				
+					        $("#vanCampos, #microCampos, #onibusLCampos, #onibusSLCampos").hide();
+				
+					        if (selectedCarro === "van") {
+					            $("#vanCampos").show();
+					        } else if (selectedCarro === "micro") {
+					            $("#microCampos").show();
+					        } else if (selectedCarro === "onibusL") {
+					            $("#onibusLCampos").show();
+					        } else if (selectedCarro === "onibusSL") {
+					            $("#onibusSLCampos").show();
+					        }
+					    });
+					});			
+					</script> 
+								
+					<script type="text/javascript">
+					//pegar os campos e colar automaticamente no painel da uso estava dando erro de duplicidade
+						var valorLugarVan = document.getElementById("lugarVan").value;
+					  	var valorLugarMicro = document.getElementById("lugarMicro").value;
+					  	var valorLugarOnibusL = document.getElementById("lugarOnibusL").value;
+					  	var valorLugarOnibusSL = document.getElementById("lugarOnibusSL").value;
+					  	var selectedCarro = document.getElementById("carropesado").value;
+
+					    if (selectedCarro === "van") {
+					    	document.getElementById("lugarPesadoUso").value = valorLugarVan;
+					    } else if (selectedCarro === "micro") {
+					    	document.getElementById("lugarPesadoUso").value = valorLugarMicro;
+					    } else if (selectedCarro === "onibusL") {
+					    	document.getElementById("lugarPesadoUso").value = valorLugarOnibusL;
+					    } else if (selectedCarro === "onibusSL") {
+					    	 document.getElementById("lugarPesadoUso").value = valorLugarOnibusSL;
+					    }
+					    
+					    var valorCondutor = document.getElementById("condutor").value;
+					    var valorCnh = document.getElementById("numCnh").value;
+					    var valorCarro = document.getElementById("carroAlugado").value;
+					    var valorDataSaida = document.getElementById("dat_DataSaida").value;
+					    var valorDataRetorno = document.getElementById("dat_DataRetorno").value;
+					    var valorValidade = document.getElementById("validadeCnh").value;
+					    var valorProcesso = document.getElementById("processo").value;	    
+					    var valorDestino = document.getElementById("destino").value;
+
+					    document.getElementById("condutorUSO").value = valorCondutor;
+					    document.getElementById("numCnhUSO").value = valorCnh;
+					    document.getElementById("carroAlugadoUSO").value = valorCarro;
+					    document.getElementById("dataRetiradaFinal").value = valorDataSaida;
+					    document.getElementById("dataRetornoFinal").value = valorDataRetorno;
+					    document.getElementById("cnhVali").value = valorValidade;
+					    document.getElementById("processoUso").value = valorProcesso;		    
+					    document.getElementById("destinoUso").value = valorDestino; 
+					    
+ 						/////////////////////////////////////////////////////////////				
+					  	
+					    var valorDataSaidaProprio = document.getElementById("dat_DataSaidapp").value;
+					  	var valorDataRetornoProprio = document.getElementById("dat_DataRetornopp").value;
+					  	
+					    document.getElementById("condutorUSO2").value = valorCondutor;
+					    document.getElementById("numCnhUSO2").value = valorCnh;
+					    document.getElementById("dataRetiradaFinal2").value = valorDataSaidaProprio;
+					    document.getElementById("dataRetornoFinal2").value = valorDataRetornoProprio;
+					    					    
+					  	/////////////////////////////////////////////////////////////////////////////
+					    
+						 var valorDataSaida2 = document.getElementById("dat_DataSaida2").value;
+						 var valorDataRetorno2 = document.getElementById("dat_DataRetorno2").value;
+						 var valorDestinoMVO = document.getElementById("destinoMVO").value;
+						 var valorTrajetoMVO = document.getElementById("trajeto").value;
+						 var valorCarroMVO = document.getElementById("_carropesado").innerText;
+						  					  					 
+						 document.getElementById("dataRetiradaPesadoUso").value = valorDataSaida2;
+						 document.getElementById("dataRetornoPesadoUso").value = valorDataRetorno2;
+						 document.getElementById("destinoPesadoUso").value = valorDestinoMVO;
+						 document.getElementById("trajetoPesadoUso").value = valorTrajetoMVO;
+						 document.getElementById("carroPesadoUso").value = valorCarroMVO;					    
+					</script>
+					 	
+					
+					<script type="text/javascript">
+						var calendarioDataSolic = FLUIGC.calendar('#dataSolic', {
+							pickDate: false,
+							useCurrent: true,
+						});
+					</script>
+					
+					<script type="text/javascript">
+						var calendarioDataAval= FLUIGC.calendar('#dataAval', {
+							pickDate: false,
+							useCurrent: true,
+						});
+					</script>
+	
+	
+					<script type="text/javascript">					
+					function painelHide() {
+					    var panel = ["cabecalho", "alerta", "painelDemandante", "painelViagem", "painel_avaliacao", 
+					    	"painelUso", "painel_locadora", "painelUsoProprio", "painelViagem2", "painel_usuario", 
+					    	"painel_dotacao", "painelDecisaoUso", "painelDiarias"];
+
+					    if (parent.WCMAPI.getUserLogin() == null) {
+					        for (var i = 0; i < panel.length; i++) {
+					        	if (i == 1 || i == 4 || i == 7 || i == 2 || i == 3 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12) {
+					            document.getElementById(panel[i]).style.display = 'none';
+					        	}
+					        }
+					    }
+					}
+					painelHide();												
+					</script>
+					
+					
+		<script type="text/javascript" src="custom.js"></script>
+
+					
+			
+	
+</html>
