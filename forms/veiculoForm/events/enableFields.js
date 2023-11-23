@@ -11,16 +11,12 @@ function enableFields(form){
 		form.setEnabled("dat_DataSaidapp",false);
 		form.setEnabled("dat_DataRetornopp",false);
 		form.setEnabled("carroOpcao",false);	
-		form.setEnabled("tipoCarro",false);
-		form.setEnabled("alugVeiculo",false);
 		form.setEnabled("gas",false);
 		form.setEnabled("carroAlugado",false);
 		form.setEnabled("dat_DataSaida",false);
 		form.setEnabled("dat_DataRetorno",false);
 		form.setEnabled("destino",false);
 		form.setEnabled("justificativa",false);
-		form.setEnabled("validadeCnh",false);
-//		form.setEnabled("escolhaPainel",false);
 		form.setEnabled("validadeCnh",false);
 		form.setEnabled("carropesado",false);
 		form.setEnabled("dat_DataSaida2",false);
@@ -35,6 +31,8 @@ function enableFields(form){
 		form.setEnabled("lugarOnibusSL",false);
 		form.setEnabled("tipoDiariaOnibusSL",false);
 		form.setEnabled("destinoMVO",false);
+		form.setEnabled("responsavel",false);
+		form.setEnabled("numTelefone",false);
 		
 	break;
 	
@@ -45,12 +43,9 @@ function enableFields(form){
 		form.setEnabled("dat_DataSaida",false);
 		form.setEnabled("dat_DataRetorno",false);
 		form.setEnabled("carroOpcao",false);	
-//		form.setEnabled("tipoCarro",false);
-//		form.setEnabled("alugVeiculo",false);
 		form.setEnabled("gas",false);
 		form.setEnabled("destino",false);
 		form.setEnabled("justificativa",false);
-		form.setEnabled("linkAcesso",false);
 		form.setEnabled("validadeCnh",false);
 		form.setEnabled("carropesado",false);
 		form.setEnabled("dat_DataSaida2",false);
@@ -65,7 +60,8 @@ function enableFields(form){
 		form.setEnabled("lugarOnibusSL",false);
 		form.setEnabled("tipoDiariaOnibusSL",false);
 		form.setEnabled("destinoMVO",false);
-
+		form.setEnabled("responsavel",false);
+		form.setEnabled("numTelefone",false);
 		
 	break;
 	
@@ -74,15 +70,12 @@ function enableFields(form){
 		form.setEnabled("numCnh",false);
 		form.setEnabled("dat_DataSaidapp",false);
 		form.setEnabled("dat_DataRetornopp",false);
-		form.setEnabled("",false);
 		form.setEnabled("carroOpcao",false);	
 		form.setEnabled("tipoCarro",false);
-//		form.setEnabled("alugVeiculo",false);
 		form.setEnabled("gas",false);
 		form.setEnabled("destino",false);
 		form.setEnabled("justificativa",false);
 		form.setEnabled("validadeCnh",false);
-
 		
 	break;
 	
@@ -97,6 +90,8 @@ function enableFields(form){
 		form.setEnabled("mail",false);
 		form.setEnabled("linkAcesso",false);
 		
+	break;
+		
 	case 36:
 		form.setEnabled("carroLiberado",false);
 		form.setEnabled("placaLiberado",false);
@@ -104,6 +99,14 @@ function enableFields(form){
 		form.setEnabled("datahorarioLocadora2",false);
 		form.setEnabled("localRetirada",false);
 		form.setEnabled("localRetorno",false);
+		form.setEnabled("vmoLiberado",false);
+		form.setEnabled("vmoPlaca",false);
+		form.setEnabled("vmoLugar",false);
+		form.setEnabled("vmoDestino",false);
+		form.setEnabled("vmoHoraSaida",false);
+		form.setEnabled("vmoHoraRetorno",false);
+		form.setEnabled("vmoSaida",false);
+		form.setEnabled("vmoRetorno",false);
 
 	break;
 	
@@ -117,7 +120,6 @@ function enableFields(form){
 		form.setEnabled("maisDiariasSelect",false);
 		form.setEnabled("qtdMaisDiaria1",false);
 
-		
 	break;
 	
 	case 44:
@@ -129,12 +131,36 @@ function enableFields(form){
 		form.setEnabled("localRetorno",false);
 		form.setEnabled("maisDiariasSelect",false);
 		form.setEnabled("qtdMaisDiaria1",false);
-
-		
+		form.setEnabled("vmoLiberado",false);
+		form.setEnabled("vmoPlaca",false);
+		form.setEnabled("vmoLugar",false);
+		form.setEnabled("vmoDestino",false);
+		form.setEnabled("vmoHoraSaida",false);
+		form.setEnabled("vmoHoraRetorno",false);
+		form.setEnabled("vmoSaida",false);
+		form.setEnabled("vmoRetorno",false);
+	
 	break;
 	
-	
-	
+	case 54:
+		form.setEnabled("vmoLiberado",false);
+		form.setEnabled("vmoPlaca",false);
+		form.setEnabled("vmoLugar",false);
+		form.setEnabled("vmoDestino",false);
+		form.setEnabled("vmoHoraSaida",false);
+		form.setEnabled("vmoHoraRetorno",false);
+		form.setEnabled("vmoSaida",false);
+		form.setEnabled("vmoRetorno",false);
+		form.setEnabled("maisDiariasSelect",false);
+		form.setEnabled("qtdMaisDiaria1",false);
+		form.setEnabled("carroLiberado",false);
+		form.setEnabled("placaLiberado",false);
+		form.setEnabled("datahorarioLocadora",false);
+		form.setEnabled("datahorarioLocadora2",false);
+		form.setEnabled("localRetirada",false);
+		form.setEnabled("localRetorno",false);
+
+	break;	
 	
 }
 }

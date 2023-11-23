@@ -2,7 +2,7 @@ function beforeStateEntry(sequenceId) {
     var cWKNumProces = getValue("WKNumProces");
     var mail = hAPI.getCardValue("mail");
 
-    if(sequenceId == 16){
+ 
         if (mail != null && mail != "") {
             var contraint = [];
             var c1 = DatasetFactory.createConstraint("codigoFormularioPublico", "teste2", "teste2", ConstraintType.MUST);
@@ -25,10 +25,9 @@ function beforeStateEntry(sequenceId) {
 
             var dataset = DatasetFactory.getDataset("ds_dpf_send_email", null, contraint, null);
             hAPI.setCardValue("linkAcesso", dataset.getValue(0, "linkInsert"));
+     
+            
         }
-    }
-    else{
-        log.info('******************************************************* sequenceId : '+ sequenceId);
-    }
+
 }
 

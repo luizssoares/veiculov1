@@ -8,26 +8,19 @@
 	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
 	<script type="text/javascript" src="dotacao.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>	
-	
-	
+	<script type="text/javascript" src="custom.js" defer></script>
 	
 
 	
-	
-	
+			
 </head>
 <body>
 <div class="fluig-style-guide">
 <form name="form" role="form">
-
-
-
 								<!--  <Hidden Dotação Orçamentária -->
 							<input type="hidden" name="codProjeto" id="codProjeto">
 							<input type="hidden" name="codAcao" id="codAcao">
 							<input type="hidden" name="codRecurso" id="codRecurso">  
-
-
 <!-- Cabeçalho -->
 
 									<div class="row" id="cabecalho">
@@ -80,27 +73,7 @@
 								<label for="processoUso">Nº Processo:</label>							
 								<input type="text" name="processoUso" id="processoUso" class="form-control" readonly>
 							</div>
-			</div>																												    
-								    <!-- <div class="col-md-6" id="cardInfo">
-								      <div class="panel panel-primary">
-								        <div class="panel-body">
-								          <div class="card" id=""cardInfo"">
-								            <div class="card-body">
-								              <h3 class="card-title">
-								                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-								                <lord-icon src="https://cdn.lordicon.com/wdqztrtx.json" trigger="loop" colors="primary:#FF0000" style="width: 25px; height: 25px; padding-top: 4px;"></lord-icon>
-								                Observação:
-								              </h3>
-								              <ul>
-								                <div id="ad">
-								                  <li><strong><u>A NOTA FISCAL E CONTRATO DE LOCAÇÃO SE ENCONTRAM EM ANEXO!</u></strong></li>
-								                </div>
-								              </ul>
-								            </div>
-								          </div>
-								        </div>
-								      </div>
-								    </div> -->							    																																						
+			</div>																												    							    				    																																						
 			</div>
 	</div>	
 	
@@ -255,13 +228,10 @@
 
 <!-- Painel Alugar Carro ou Carro Próprio -->
 
-	<div class="panel panel-primary" id="painelViagem">
+<div class="panel panel-primary" id="painelViagem">
 	<div class="panel-heading">
 		<h3 class="panel-title"><i class="flaticon flaticon-message-question icon-sm" aria-hidden="true"></i> Aluguel de carro ou solicitação de veículo próprio</h3>
-	</div>
-	
-	<div class="form-group row">
-		<div class="col-md-12">					
+	</div>				
 					<div class="panel-body">
 								<div class="form-group row">
 									<div class="col-md-6" id="cardAluguel">								      								        
@@ -285,11 +255,8 @@
 								              </ul>
 								            </div>
 								          </div>						      
-								    </div>
-								    
-								 </div>   		
-					
-					
+								    </div>							    
+								 </div>   								
 						<div class="form-group row">													
 					    	<div class="form-group col-md-3">
 								<label for="condutor">Nome do Condutor</label>
@@ -337,35 +304,33 @@
 				            </div>
 				        </div>    				
 					<!--CARRO PRÓPRIO-->	
-						<div class="row">
-								<div class="col-md-2" id="d1">
+						<div class="row" id="camposCarroProprio">
+								<div class="col-md-2">
 									<label>CARRO</label>
 									<select name="tipoCarro" id="tipoCarro" class="form-control" dataset="dsCarroSede" datasetkey="Carro" datasetvalue="Carro"></select>
 								</div>
 					<!--PLACA-->												
-								<div class="col-md-1" id="d2">	
+							<div class="col-md-1">	
 									<label>PLACA</label>
 									<div class="input-group">
 										<input class="form-control" type="text" readonly
 											name="tipoPlaca" id="tipoPlaca">
 									</div>
-								</div>							
+							</div>													
 					<!--GRUPO PERTECENTE-->
-								<div class="col-md-1" id="d3">
+								<div class="col-md-1">
 									<label >GRUPO</label>
 									<div class="input-group">
 										<input class="form-control" type="text" readonly
-											name="tipoGrupo" id="tipoGrupo">
+										name="tipoGrupo" id="tipoGrupo">
 									</div>
-								</div>
-							</div>	
-							
-					<!-- datas de saída e retorno (VEIC.PRÓPRIO) -->
-					
+								</div>							
+						</div>																				
+					<!-- datas de saída e retorno (VEIC.PRÓPRIO) -->		
 <!-- n mexer -->		<div class="form-group row"></div>
 
-						<div class="row">				
-							<div id="d5">	
+						<div class="row" id="camposCarroProprio2">				
+							<div>	
 								<div class="col-md-2 input-default">
 									<label for="dat_DataSaidapp" class= "label label-primary">Data de Saída</label>
 									<span class="required text-danger">
@@ -374,7 +339,7 @@
 									<input type="date" class="form-control" name="dat_DataSaidapp" id="dat_DataSaidapp">
 								</div>
 							</div>
-							<div id="d6">
+							<div>
 								<div class="col-md-2 input-default">
 									<label for="dat_DataRetornopp" class= "label label-primary">Data de Retorno</label>
 									<span class="required text-danger">
@@ -382,34 +347,30 @@
 					                </span>
 									<input type="date" class="form-control" name="dat_DataRetornopp" id="dat_DataRetornopp">
 								</div>
-							</div>
-							 
-						</div>	
-												
-						<!--ALUGA VEICULO-->
-																	
-						<div class="form-group row" id="z">
-						    <div class="col-md-2" id="">
+							</div>					 
+						</div>												
+						<!--ALUGA VEICULO-->														
+						<div class="form-group row" id="camposAluguelVeiculo">
+						    <div class="col-md-2">
 						        <label>CARRO</label>
 						        <select name="carroAlugado" id="carroAlugado" class="form-control" dataset="dsAluguel" datasetkey="Veiculo" datasetvalue="Veiculo"></select>
 						    </div>
-						    <div class="col-md-1" id="x">    
+						    <div class="col-md-1">    
 						        <label>DIÁRIA</label>
 						        <div class="input-group">
 						            <input class="form-control" type="text" readonly name="qtDia" id="qtDia">
 						        </div>
 						    </div>
-						</div>
-						
-						<div class="form-group row">
-						    <div class="col-md-2 input-default" id="c">
+						</div>		
+						<div class="form-group row" id="camposAluguelVeiculo2">
+						    <div class="col-md-2 input-default">
 						        <label for="dat_DataSaida" class="label label-primary">Data e Hora de Saída</label>
 						        <span class="required text-danger">
 						            <strong>*</strong>
 						        </span>
 						        <input type="datetime-local" class="form-control" name="dat_DataSaida" id="dat_DataSaida">
 						    </div>
-						    <div class="col-md-2 input-default" id="v">
+						    <div class="col-md-2 input-default">
 						        <label for="dat_DataRetorno" class="label label-primary">Data e Hora de Retorno</label>
 						        <span class="required text-danger">
 						            <strong>*</strong>
@@ -430,8 +391,11 @@
 								<input type="text" name="destino" id="destino" class="form-control" placeholder="Destino completo">
 							</div>
 						
-							<div class="col-md-2">								
-								<label>Estimativa de consumo de combustível:</label>								
+							<div class="col-md-3">								
+								<label>Estimativa de consumo de combustível:</label>
+								<span class="required text-danger">
+					                    <strong>*</strong>
+					            </span>								
 								<input id="gas" name="gas" onkeyup="gasolina(this);" /><br/>
 							</div>
 						</div>
@@ -446,13 +410,12 @@
 								</div>
 							</div>
 						</div>																																						
-					</div>						
-		</div>
-	</div>			
-</div>
+					</div>	
+				</div>
+			
+								
 
 <!-- Painel Van / Micro / Onibus Leito / Onibus SL  -->
-
 
 			<div class="panel panel-primary" id="painelViagem2">
 			    <div class="panel-heading">
@@ -478,7 +441,7 @@
 			            </div>
 			        </div>		       			      			       			        			        
 			        <div class="form-group row" id="vanCampos" >
-			            <div class="col-md-3">
+			            <div class="col-md-2">
 			                <label for="lugar">Lugar</label>
 			                	<select name="lugarVan" id="lugarVan" class="form-control" dataset="dsVanAluguel" datasetkey="Lugar" datasetvalue="Lugar"></select>					             
 			             </div>
@@ -491,7 +454,7 @@
 			          </div>
 			          
 			          <div class="form-group row" id="microCampos">
-			            <div class="col-md-3">
+			            <div class="col-md-2">
 			                <label>Lugar</label>
 			                	<select name="lugarMicro" id="lugarMicro" class="form-control" dataset="dsMicroAluguel" datasetkey="Lugar" datasetvalue="Lugar"></select>					             
 			             </div>
@@ -504,7 +467,7 @@
 			          </div> 
 			          
 			          <div class="form-group row" id="onibusLCampos">
-			            <div class="col-md-3">
+			            <div class="col-md-2">
 			                <label>Lugar</label>
 			                	<select name="lugarOnibusL" id="lugarOnibusL" class="form-control" dataset="dsOnibusLAluguel" datasetkey="Lugar" datasetvalue="Lugar"></select>				             
 			             </div>
@@ -517,7 +480,7 @@
 			          </div> 
 			          
 			          <div class="form-group row" id="onibusSLCampos">
-			            <div class="col-md-3">
+			            <div class="col-md-2">
 			                <label>Lugar</label>
 			                	<select name="lugarOnibusSL" id="lugarOnibusSL" class="form-control" dataset="dsOnibusSLAluguel" datasetkey="Lugar" datasetvalue="Lugar"></select>					             
 			             </div>
@@ -551,7 +514,25 @@
 						</div>
 			               				
 					<div id="resultado2"></div>				
-					<div class="form-group row"></div>
+<!-- espaço -->		<div class="form-group"></div>
+					
+					<div class="row">	
+						<div class="form-group col-md-3">
+							<label for="responsavel">Responsável:</label>
+							<span class="required text-danger">
+								<strong>*</strong>
+							</span>
+							<input type="text" name="responsavel" id="responsavel" class="form-control">
+						</div>
+						
+						<div class="form-group col-md-2">
+							<label for="numTelefone">Nº Telefone:</label>
+								<span class="required text-danger">
+								<strong>*</strong>
+								</span>
+							<input type="text" name="numTelefone" id="numTelefone" class="form-control" mask="(00)00000-0000">
+						</div>
+					</div>	
 					
 					<div class="row">
 						<div class="col-md-3">
@@ -562,6 +543,7 @@
 							<input type="text" name="destinoMVO" id="destinoMVO" class="form-control">
 						</div>
 					</div>
+<!-- espaço -->		<div class="form-group"></div>
 					<div class="row">	
 							<div class="col-md-4">
 								<div class="form-group" id="trajeto">
@@ -575,7 +557,6 @@
 								</div>
 							</div>
 						</div> 
-
 			         </div>					      
 			    </div>										
 
@@ -585,8 +566,7 @@
 							<div class="panel-heading">
 								<h3 class="panel-title"><i class="flaticon flaticon-star-active icon-sm" aria-hidden="true"></i> Avaliação</h3>
 							</div>
-							<div class="panel-body">
-								
+							<div class="panel-body">	
 								<div class="form-group row">
 									<div class="col-md-3">
 								          <div class="card">
@@ -670,8 +650,7 @@
 								        <h3 class="panel-title"><i class="flaticon flaticon-airport-shuttle icon-sm" aria-hidden="true"></i>
 								         Unidade de Suporte Operacional - USO</h3>
 								    </div>
-								    <div class="panel-body">
-								    							        
+								    <div class="panel-body">							    							        
 							        	<div class="form-group col-md-2">
 											<label for="carroPesadoUso">Tipo de Veículo:</label>
 											<input type="text" name="carroPesadoUso" id="carroPesadoUso" class="form-control" readonly>
@@ -683,21 +662,33 @@
 										<div class="form-group col-md-2">
 											<label for="destinoPesadoUso">Destino:</label>
 											<input type="text" name="destinoPesadoUso" id="destinoPesadoUso" class="form-control" readonly>
-										</div>	
-										
-										
-										
+										</div>																													
 									<div class="form-group row">
-									    <div class="col-md-2 input-default">
-									        <label for="dataRetiradaPesadoUso" class="label label-primary">Retirada do Veículo</label>
+									    <div class="col-md-2">
+									        <label for="dataRetiradaPesadoUso">Retirada do Veículo</label>
 									        <input type="datetime-local" class="form-control" name="dataRetiradaPesadoUso" id="dataRetiradaPesadoUso" readonly>
 									    </div>
-									    <div class="col-md-2 input-default">
-									        <label for="dataRetornoPesadoUso" class="label label-primary">Devolução do Veículo</label>
+									    <div class="col-md-2">
+									        <label for="dataRetornoPesadoUso">Devolução do Veículo</label>
 									        <input type="datetime-local" class="form-control" name="dataRetornoPesadoUso" id="dataRetornoPesadoUso" readonly>
 									    </div>
-									</div>
-									
+									</div>									
+									<div class="row">	
+										<div class="form-group col-md-3">
+											<label for="responsavelUso">Responsável:</label>
+											<span class="required text-danger">
+												<strong>*</strong>
+											</span>
+											<input type="text" name="responsavelUso" id="responsavelUso" class="form-control" readonly>
+										</div>										
+										<div class="form-group col-md-2">
+											<label for="numTelefoneUso">Nº Telefone:</label>
+												<span class="required text-danger">
+												<strong>*</strong>
+												</span>
+											<input type="text" name="numTelefoneUso" id="numTelefoneUso" class="form-control" readonly>
+										</div>
+									</div>																						
 									<div class="row">	
 										<div class="col-md-4">
 											<div class="form-group">
@@ -709,8 +700,7 @@
 												></textarea>												
 											</div>
 										</div>
-									</div> 
-									
+									</div> 						
 									<div class="form-group row">	
 											<div class="col-md-5">
 												<label for="mail">E-mail da locadora:</label>												
@@ -720,20 +710,13 @@
 											<div class="col-md-5">
 												<label for="linkAcesso">link de acesso</label>												
 												<input type="text" name="linkAcesso2" id="linkAcesso2" class="form-control">
-											</div>
-											
+											</div>											
 										</div>
-									
-									
-									
-											
-							        
 								    </div>
 								</div>
 
 
 <!-- Painel USO (ALUGAR CARRO) -->
-
 
 							<div class="panel panel-primary" id="painelUso">
 							    <div class="panel-heading">
@@ -790,8 +773,7 @@
 										    <span class="required text-danger"><strong>*</strong></span>
 										    <input type="text" name="numCartao" id="numCartao" class="form-control" placeholder="Ex: COR-1234" oninput="formatCartao(this)">
 										</div>										 									
-									</div>
-									
+									</div>								
 									<div class="form-group row">
 									    <div class="col-md-2 input-default" id="">
 									        <label for="dataRetiradaFinal" class="label label-primary">Retirada do Veículo</label>
@@ -807,27 +789,21 @@
 									        </span>
 									        <input type="datetime-local" class="form-control" name="dataRetornoFinal" id="dataRetornoFinal" readonly>
 									    </div>
-									</div>
-									
+									</div>						
 										<div class="form-group row">	
 											<div class="col-md-5">
 												<label for="mail">E-mail da locadora:</label>												
 												<input type="text" name="mail" id="mail" class="form-control">
-											</div>
-																																																															
+											</div>																																																												
 											<div class="col-md-5">
 												<label for="linkAcesso">link de acesso</label>												
 												<input type="text" name="linkAcesso" id="linkAcesso" class="form-control">
 											</div>											
-										</div>
-										
-										
-									
+										</div>																							
 							    </div>
 							</div>
 
 <!-- Painel USO (CARRO PROPRIO) -->
-
 
 							 <div class="panel panel-primary" id="painelUsoProprio">
 							    <div class="panel-heading">
@@ -849,8 +825,7 @@
 							               		</span>
 											<input type="text" name="numCnhUSO2" id="numCnhUSO2" class="form-control" readonly>
 										</div>																										
-									</div>		
-							    
+									</div>									    
 							    	<div class="form-group row">
 							    		<div class="col-md-2" id="usoSede">
 											<label>CARRO</label>
@@ -862,15 +837,13 @@
 							                    <strong>*</strong>
 							               		</span>
 											<input type="text" name="numDiarias2" id="numDiarias2" class="form-control" mask="00">
-										</div> 
-										
+										</div> 								
 										<div class="form-group col-md-1">
 										    <label for="numCartao2">Cartão</label>
 										    <span class="required text-danger"><strong>*</strong></span>
 										    <input type="text" name="numCartao2" id="numCartao2" class="form-control" placeholder="Ex: COR-1234" oninput="formatCartao(this)">
 										</div>
-									</div>
-									
+									</div>								
 									<div class="form-group row">
 										<div class="col-md-2 input-default">
 											<label for="dataRetiradaFinal2" class= "label label-primary">Retirada do Veículo</label>										
@@ -969,27 +942,90 @@
 
 <!-- Painel Locadora (ALUGAR VAN/MICRO/ONIBUS) -->
 
-			<div class="panel panel-primary" id="painel_locadora2">
-			    <div class="panel-heading">
-			        <h3 class="panel-title"><i class="flaticon flaticon-company icon-sm" aria-hidden="true"></i> Locadora de Veículos (VAN/MICRO/ÔNIBUS) </h3>
-			    </div>
-			    <div class="panel-body">
-			        Panel content
-			    </div>
-			</div>
+								<div class="panel panel-primary" id="painel_locadora2">
+								    <div class="panel-heading">
+								        <h3 class="panel-title"><i class="flaticon flaticon-company icon-sm" aria-hidden="true"></i> Locadora de Veículos (VAN/MICRO/ÔNIBUS) </h3>
+								    </div>
+								    <div class="panel-body">
+								        <div class="form-group row">
+										    <div class="col-md-2 input-default">
+										        <label for=vmoLiberado class="label label-primary">Veículo Liberado</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="text" class="form-control" name="vmoLiberado" id="vmoLiberado" placeholder="Ex: Van, Micro Ônibus...">
+										    </div>
+										    <div class="col-md-2 input-default">
+										        <label for="vmoPlaca" class="label label-primary">Placa do Veículo</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="text" class="form-control" name="vmoPlaca" id="vmoPlaca" placeholder="Padrão: 000-0000" mask="AAA-AAAA">
+										    </div>
+										 </div>   
+										<div class="form-group row">    
+										    <div class="col-md-2 input-default">
+										        <label for="vmoLugar" class="label label-primary">Lugar</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="text" class="form-control" name="vmoLugar" id="vmoLugar" placeholder="Ex: Nome do munícipio">
+										    </div>
+										    <div class="col-md-2 input-default">
+										        <label for="vmoDestino" class="label label-primary">Destino</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="text" class="form-control" name="vmoDestino" id="vmoDestino" placeholder="Ex: Destino final">
+										    </div>
+										</div>
+										<div class="form-group row">
+										    <div class="col-md-2 input-default">
+										        <label for="vmoHoraSaida" class="label label-primary">Data e Hora da Saída</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="datetime-local" class="form-control" name="vmoHoraSaida" id="vmoHoraSaida">
+										    </div>
+										    <div class="col-md-2 input-default">
+										        <label for="vmoHoraRetorno" class="label label-primary">Data e Hora do Retorno</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="datetime-local" class="form-control" name="vmoHoraRetorno" id="vmoHoraRetorno">
+										    </div>
+										</div>									
+										<div class="form-group row">
+										    <div class="col-md-2 input-default">
+										        <label for="vmoSaida" class="label label-primary">Local da saída do veículo</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="text" class="form-control" name="vmoSaida" id="vmoSaida" placeholder="Endereço da Locadora, Sebrae-SEDE">
+										    </div>
+										    <div class="col-md-2 input-default">
+										        <label for="vmoRetorno" class="label label-primary">Local do retorno do veículo</label>
+										        <span class="required text-danger">
+										            <strong>*</strong>
+										        </span>
+										        <input type="text" class="form-control" name="vmoRetorno" id="vmoRetorno" placeholder="Endereço da Locadora, Sebrae-SEDE">
+										    </div>
+										</div>		
+								    </div>
+								</div>
 
 <!-- Painel de  adição de diárias -->
 				
 					<div class="panel panel-primary" id="painelDiarias">
 					    <div class="panel-heading">
 					        <h3 class="panel-title"><i class="flaticon flaticon-circle-plus icon-sm" aria-hidden="true"></i>
-					         Necessita de mais diárias?</h3>
+					         Adição de Diárias (OPCIONAL)</h3>
 					    </div>
 					    <div class="panel-body">
 					    	<div class="form-group row">					        				               
-								<div class="col-md-3">
+								<div class="col-md-2">
 									<div>
-										<label>Selecione:</label>
+										<label>Necessita de diárias? Selecione, somente se NECESSÁRIO:</label>
 									</div> 	
 						            <select name="maisDiariasSelect" id="maisDiariasSelect">
 						                <option value=""></option>
@@ -1007,16 +1043,89 @@
 						        </div>
 					        </div>
 					    </div>
-					    
-					    ------- Disparo do email p/ locadora
 					</div>
 					
 								
 </form>
 </div>
 </body>	
-		
-				<script>
+
+					<script>
+					    // Adiciona um ouvinte de evento para o evento 'input' no campo de texto
+					    document.getElementById('placaLiberado').addEventListener('input', function () {
+					        // Obtém o valor atual do campo de texto
+					        let inputValue = this.value;
+					
+					        // Remove caracteres não alfanuméricos (exceto letras e números)
+					        inputValue = inputValue.replace(/[^a-zA-Z0-9]/g, '');
+					
+					        // Formata o valor como desejado (por exemplo, AAA-AAAA)
+					        let formattedValue = inputValue.slice(0, 3) + '-' + inputValue.slice(3);
+					
+					        // Define o valor formatado de volta no campo de texto
+					        this.value = formattedValue;
+					    });
+					</script>
+
+
+
+
+				 	<script>
+				 	function publicForm() {
+				 	    var aluguelCarro = document.getElementById("condutorUSO");
+				 	    var aluguelVMO = document.getElementById("carroPesadoUso");
+				 	    var painelCarro1 = document.getElementById("painel_locadora");
+				 	    var painelVMO1= document.getElementById("painel_locadora2");
+				 	    var painelCarro2 = document.getElementById("painelUso");
+				 	    var painelVMO2 = document.getElementById("painelUso2");
+
+				 	    painelCarro1.style.display = "none";
+				 	    painelCarro2.style.display = "none";
+				 	    painelVMO1.style.display = "none";
+				 	    painelVMO2.style.display = "none";
+
+				 	    if(aluguelCarro != null) {
+				 	        painelCarro1.style.display = "block";
+				 	        painelCarro2.style.display = "block";
+				 	    } else if(aluguelVMO != null) {
+				 	        painelVMO1.style.display = "block";
+				 	        painelVMO2.style.display = "block";
+				 	    }
+				 	}
+				 	window.addEventListener("load", function() {
+				 	    publicForm();
+				 	});
+
+
+				 	
+				
+					function painelHide() {
+					    var panel = ["cabecalho", "alerta", "painelDemandante", "painelViagem", "painel_avaliacao", 
+					    	"painelUso", "painel_locadora", "painelUsoProprio", "painelViagem2", "painel_usuario", 
+					    	"painel_dotacao", "painelDecisaoUso", "painelDiarias"];
+	
+					    if (parent.WCMAPI.getUserLogin() == null) {
+					        for (var i = 0; i < panel.length; i++) {
+					        	if (i == 1 || i == 4 || i == 7 || i == 2 || i == 3 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12) {
+					            document.getElementById(panel[i]).style.display = 'none';
+					        	}
+					        }
+					    }
+					}
+					painelHide();	
+					
+					
+					var calendarioDataSolic = FLUIGC.calendar('#dataSolic', {
+						pickDate: false,
+						useCurrent: true,
+					});
+			
+				
+					var calendarioDataAval= FLUIGC.calendar('#dataAval', {
+						pickDate: false,
+						useCurrent: true,
+					});
+					
 					$(document).ready(function () {
 					    $("#vanCampos, #microCampos, #onibusLCampos, #onibusSLCampos").hide();
 				
@@ -1035,11 +1144,11 @@
 					            $("#onibusSLCampos").show();
 					        }
 					    });
-					});			
-					</script> 
-								
+					});	
+					</script>
+							
 					<script type="text/javascript">
-					//pegar os campos e colar automaticamente no painel da uso estava dando erro de duplicidade
+						////////////////////////////////////////////////////////////////
 						var valorLugarVan = document.getElementById("lugarVan").value;
 					  	var valorLugarMicro = document.getElementById("lugarMicro").value;
 					  	var valorLugarOnibusL = document.getElementById("lugarOnibusL").value;
@@ -1064,6 +1173,8 @@
 					    var valorValidade = document.getElementById("validadeCnh").value;
 					    var valorProcesso = document.getElementById("processo").value;	    
 					    var valorDestino = document.getElementById("destino").value;
+					    var valorResponsavel = document.getElementById("responsavel").value;
+					    var valorTelefone = document.getElementById("numTelefone").value;
 
 					    document.getElementById("condutorUSO").value = valorCondutor;
 					    document.getElementById("numCnhUSO").value = valorCnh;
@@ -1073,8 +1184,10 @@
 					    document.getElementById("cnhVali").value = valorValidade;
 					    document.getElementById("processoUso").value = valorProcesso;		    
 					    document.getElementById("destinoUso").value = valorDestino; 
+					    document.getElementById("responsavelUso").value = valorResponsavel;
+						document.getElementById("numTelefoneUso").value = valorTelefone;	
 					    
- 						/////////////////////////////////////////////////////////////				
+ 						/////////////////////////////////////////////////////////////			
 					  	
 					    var valorDataSaidaProprio = document.getElementById("dat_DataSaidapp").value;
 					  	var valorDataRetornoProprio = document.getElementById("dat_DataRetornopp").value;
@@ -1084,8 +1197,7 @@
 					    document.getElementById("dataRetiradaFinal2").value = valorDataSaidaProprio;
 					    document.getElementById("dataRetornoFinal2").value = valorDataRetornoProprio;
 					    					    
-					  	/////////////////////////////////////////////////////////////////////////////
-					    
+					  	////////////////////////////////////////////////////////////////
 						 var valorDataSaida2 = document.getElementById("dat_DataSaida2").value;
 						 var valorDataRetorno2 = document.getElementById("dat_DataRetorno2").value;
 						 var valorDestinoMVO = document.getElementById("destinoMVO").value;
@@ -1098,44 +1210,6 @@
 						 document.getElementById("trajetoPesadoUso").value = valorTrajetoMVO;
 						 document.getElementById("carroPesadoUso").value = valorCarroMVO;					    
 					</script>
-					 	
-					
-					<script type="text/javascript">
-						var calendarioDataSolic = FLUIGC.calendar('#dataSolic', {
-							pickDate: false,
-							useCurrent: true,
-						});
-					</script>
-					
-					<script type="text/javascript">
-						var calendarioDataAval= FLUIGC.calendar('#dataAval', {
-							pickDate: false,
-							useCurrent: true,
-						});
-					</script>
-	
-	
-					<script type="text/javascript">					
-					function painelHide() {
-					    var panel = ["cabecalho", "alerta", "painelDemandante", "painelViagem", "painel_avaliacao", 
-					    	"painelUso", "painel_locadora", "painelUsoProprio", "painelViagem2", "painel_usuario", 
-					    	"painel_dotacao", "painelDecisaoUso", "painelDiarias"];
-
-					    if (parent.WCMAPI.getUserLogin() == null) {
-					        for (var i = 0; i < panel.length; i++) {
-					        	if (i == 1 || i == 4 || i == 7 || i == 2 || i == 3 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12) {
-					            document.getElementById(panel[i]).style.display = 'none';
-					        	}
-					        }
-					    }
-					}
-					painelHide();												
-					</script>
-					
-					
-		<script type="text/javascript" src="custom.js"></script>
-
-					
-			
+					 									
 	
 </html>

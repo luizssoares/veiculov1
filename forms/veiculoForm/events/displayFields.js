@@ -40,21 +40,24 @@ function displayFields(form,customHTML){
 		form.setVisibleById("alerta", false);
 		form.setVisibleById("painelDiarias", false);
 		form.setVisibleById("painel_locadora2", false);
+		form.setVisibleById("cardDemandante", false);
+		
 	
 		
 	break;
 	
 	case 14:
 		form.setVisibleById("painel_avaliacao", false);
+		form.setVisibleById("alerta", false);
 		form.setVisibleById("usoSede", false);
 		form.setVisibleById("painel_locadora", false);
 		form.setVisibleById("painelUsoProprio", false);
 		form.setVisibleById("cardInfo", false);
 		form.setVisibleById("processo1", false);
 		form.setVisibleById("painel_usuario", false);
-		form.setVisibleById("painel_dotacao", false);
 		form.setVisibleById("painelDiarias", false);
 		form.setVisibleById("painel_locadora2", false);
+		form.setVisibleById("cardDemandante", false);
 		
 		
 	break;
@@ -71,8 +74,6 @@ function displayFields(form,customHTML){
 		form.setVisibleById("alerta", false);
 		form.setVisibleById("painel_usuario", false);
 		form.setVisibleById("painelDecisaoUso", false);
-		form.setVisibleById("painel_locadora2", false);
-	
 		
 	break;
 	
@@ -86,6 +87,8 @@ function displayFields(form,customHTML){
 		form.setVisibleById("painel_usuario", false);
 		form.setVisibleById("painelDecisaoUso", false);
 		form.setVisibleById("painelDiarias", false);
+		form.setVisibleById("painel_locadora2", false);
+		form.setVisibleById("painel_dotacao", false);
 		
 	
 		
@@ -95,6 +98,7 @@ function displayFields(form,customHTML){
 		form.setVisibleById("painelViagem", false);
 		form.setVisibleById("painelUso", false);
 		form.setVisibleById("painel_locadora", false);
+		form.setVisibleById("painel_locadora2", false);
 		form.setVisibleById("painelUsoProprio", false);
 		form.setVisibleById("cardDemandante", false);
 		form.setVisibleById("painel_dotacao", false);
@@ -125,27 +129,11 @@ function displayFields(form,customHTML){
 		form.setVisibleById("painel_avaliacao", false);
 		form.setVisibleById("painelUsoProprio", false);
 		form.setVisibleById("alerta", false);
-		form.setVisibleById("painelUso", false);
 		form.setVisibleById("painel_dotacao", false);
 		form.setVisibleById("painelDecisaoUso", false);
-		form.setVisibleById("painelUso2", false);
-		
+		form.setVisibleById("cardLocadora", false);	
 	
 	break;
-	
-	case 42:
-//		form.setVisibleById("painel_dotacao", false);
-//		form.setVisibleById("painelDemandante", false);
-		form.setVisibleById("alerta", false);
-		form.setVisibleById("painel_avaliacao", false);
-		form.setVisibleById("painel_usuario", false);
-		form.setVisibleById("painelDecisaoUso", false);
-		form.setVisibleById("painelUsoProprio", false);
-		form.setVisibleById("cardDemandante", false);
-		
-	
-	break;
-	
 	
 	case 44:
 		form.setVisibleById("painelDemandante", false);
@@ -158,9 +146,20 @@ function displayFields(form,customHTML){
 		form.setVisibleById("painelDecisaoUso", false);
 		form.setVisibleById("painelUso2", false);
 		
-	
 	break;
 	
+	case 54:
+	//	form.setVisibleById("painelDemandante", false);
+		form.setVisibleById("painel_usuario", false);
+		form.setVisibleById("painel_avaliacao", false);
+		form.setVisibleById("painelUsoProprio", false);
+		form.setVisibleById("alerta", false);
+		form.setVisibleById("painel_dotacao", false);
+		form.setVisibleById("painelDecisaoUso", false);
+		form.setVisibleById("painelDiarias", false);
+		form.setVisibleById("cardLocadora", false);
+		
+	break;
 	
 	
 	}

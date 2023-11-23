@@ -43,7 +43,7 @@ function optAcao(){
             }
         }
     }
-    //console.log(GetUni)
+
     
     var ArrayUni = GetUni.filter(function(el, i) {
         return GetUni.indexOf(el) === i;
@@ -390,7 +390,7 @@ function verificaDotacao(){
     //console.log("etapa for: "+ Now)
 
     for(var i=1; i<=linha; i++){
-        console.log("entrou for verificação ... linha: " + i)
+        //console.log("entrou for verificação ... linha: " + i)
         //slcProjeto(i)
         //slcAcao(i)
         //slcUnidade(i)

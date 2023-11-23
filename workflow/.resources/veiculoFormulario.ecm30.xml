@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Solicitação de Veículos (ALUGUEL ou PRÓPRIO)</processId>
-      <version>50</version>
+      <version>68</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>104779</formId>
@@ -111,7 +111,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;20000835&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -126,8 +127,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>380</positionX>
-      <positionY>87</positionY>
+      <positionX>300</positionX>
+      <positionY>122</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -162,7 +163,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;20000835&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -213,7 +215,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;20000835&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -228,8 +231,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>621</positionX>
-      <positionY>457</positionY>
+      <positionX>480</positionX>
+      <positionY>429</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -264,7 +267,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;UTIC&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -308,8 +312,8 @@
         <version>1</version>
         <sequence>23</sequence>
       </processStatePK>
-      <stateName>Realização da Viagem e  Avaliação do Serviço</stateName>
-      <stateDescription>Realização da Viagem e  Avaliação do Serviço</stateDescription>
+      <stateName>Realização da Viagem e  Avaliação</stateName>
+      <stateDescription>Realização da Viagem e  Avaliação</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -360,8 +364,8 @@
         <version>1</version>
         <sequence>24</sequence>
       </processStatePK>
-      <stateName>Devolução do Veículo e Avaliação do Serviço</stateName>
-      <stateDescription>Devolução do Veículo e Avaliação do Serviço</stateDescription>
+      <stateName>Devolução do Veículo e Avaliação</stateName>
+      <stateDescription>Devolução do Veículo e Avaliação</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -412,15 +416,15 @@
         <version>1</version>
         <sequence>36</sequence>
       </processStatePK>
-      <stateName>Retirada e  Realização da viagem</stateName>
-      <stateDescription>Retirada e  Realização da viagem</stateDescription>
+      <stateName>Recebimento do Veículo</stateName>
+      <stateDescription>Recebimento do Veículo</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Executor Atividade</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;9&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;20000835&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -435,58 +439,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>800</positionX>
-      <positionY>180</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>1</version>
-        <sequence>42</sequence>
-      </processStatePK>
-      <stateName>Notificar a locadora da adição de diárias</stateName>
-      <stateDescription>Notificar a locadora da adição de diárias</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>970</positionX>
-      <positionY>390</positionY>
+      <positionX>720</positionX>
+      <positionY>422</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -521,6 +475,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;20000835&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -562,6 +518,58 @@
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
         <version>1</version>
+        <sequence>54</sequence>
+      </processStatePK>
+      <stateName>Realização da Viagem</stateName>
+      <stateDescription>Realização da Viagem</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;9&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>720</positionX>
+      <positionY>200</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Solicitação de Veículos (v1)</processId>
+        <version>1</version>
         <sequence>12</sequence>
       </processStatePK>
       <stateName>Viagem Aprovada</stateName>
@@ -572,33 +580,8 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <automatic>true</automatic>
-      <positionX>550</positionX>
-      <positionY>70</positionY>
-      <inhibitTransfer>false</inhibitTransfer>
-      <stateType>1</stateType>
-      <bpmnType>120</bpmnType>
-      <signalId>0</signalId>
-      <openInstances>0</openInstances>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>1</version>
-        <sequence>38</sequence>
-      </processStatePK>
-      <stateName>Adição de diárias</stateName>
-      <stateDescription>Adição de diárias</stateDescription>
-      <joint>false</joint>
-      <initialState>false</initialState>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <automatic>true</automatic>
-      <positionX>1000</positionX>
-      <positionY>180</positionY>
+      <positionX>480</positionX>
+      <positionY>98</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -683,7 +666,7 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>220</positionX>
+      <positionX>340</positionX>
       <positionY>20</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
@@ -708,7 +691,7 @@
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
         <expressionOrder>1</expressionOrder>
-        <version>50</version>
+        <version>68</version>
         <sequence>12</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -720,7 +703,7 @@
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
         <expressionOrder>2</expressionOrder>
-        <version>50</version>
+        <version>68</version>
         <sequence>12</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -732,35 +715,11 @@
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
         <expressionOrder>3</expressionOrder>
-        <version>50</version>
+        <version>68</version>
         <sequence>12</sequence>
       </conditionProcessStatePK>
       <condition></condition>
       <destinationSequenceId>14</destinationSequenceId>
-      <conditionType>1</conditionType>
-    </ConditionProcessState>
-    <ConditionProcessState>
-      <conditionProcessStatePK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <expressionOrder>1</expressionOrder>
-        <version>50</version>
-        <sequence>38</sequence>
-      </conditionProcessStatePK>
-      <condition></condition>
-      <destinationSequenceId>24</destinationSequenceId>
-      <conditionType>1</conditionType>
-    </ConditionProcessState>
-    <ConditionProcessState>
-      <conditionProcessStatePK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <expressionOrder>2</expressionOrder>
-        <version>50</version>
-        <sequence>38</sequence>
-      </conditionProcessStatePK>
-      <condition></condition>
-      <destinationSequenceId>42</destinationSequenceId>
       <conditionType>1</conditionType>
     </ConditionProcessState>
   </list>
@@ -821,182 +780,12 @@
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
         <version>1</version>
-        <linkSequence>32</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>10</initialStateSequence>
-      <finalStateSequence>31</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>1</version>
-        <linkSequence>33</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>15</initialStateSequence>
-      <finalStateSequence>23</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>1</version>
-        <linkSequence>34</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>true</returnPermited>
-      <initialStateSequence>12</initialStateSequence>
-      <finalStateSequence>15</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>1</version>
-        <linkSequence>37</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>16</initialStateSequence>
-      <finalStateSequence>36</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>1</version>
-        <linkSequence>39</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>36</initialStateSequence>
-      <finalStateSequence>38</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>1</version>
-        <linkSequence>40</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>38</initialStateSequence>
-      <finalStateSequence>24</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>1</version>
         <linkSequence>41</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
       <initialStateSequence>24</initialStateSequence>
       <finalStateSequence>17</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>1</version>
-        <linkSequence>43</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>38</initialStateSequence>
-      <finalStateSequence>42</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>1</version>
-        <linkSequence>45</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>42</initialStateSequence>
-      <finalStateSequence>44</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>1</version>
-        <linkSequence>46</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>44</initialStateSequence>
-      <finalStateSequence>36</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>1</version>
-        <linkSequence>47</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>12</initialStateSequence>
-      <finalStateSequence>14</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -1020,6 +809,159 @@
       <defaultLink>false</defaultLink>
       <type>0</type>
     </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Solicitação de Veículos (v1)</processId>
+        <version>1</version>
+        <linkSequence>49</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>10</initialStateSequence>
+      <finalStateSequence>31</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Solicitação de Veículos (v1)</processId>
+        <version>1</version>
+        <linkSequence>50</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>12</initialStateSequence>
+      <finalStateSequence>14</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Solicitação de Veículos (v1)</processId>
+        <version>1</version>
+        <linkSequence>51</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>12</initialStateSequence>
+      <finalStateSequence>15</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Solicitação de Veículos (v1)</processId>
+        <version>1</version>
+        <linkSequence>52</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>15</initialStateSequence>
+      <finalStateSequence>23</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Solicitação de Veículos (v1)</processId>
+        <version>1</version>
+        <linkSequence>60</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>44</initialStateSequence>
+      <finalStateSequence>54</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Solicitação de Veículos (v1)</processId>
+        <version>1</version>
+        <linkSequence>61</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>54</initialStateSequence>
+      <finalStateSequence>24</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Solicitação de Veículos (v1)</processId>
+        <version>1</version>
+        <linkSequence>62</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>16</initialStateSequence>
+      <finalStateSequence>36</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Solicitação de Veículos (v1)</processId>
+        <version>1</version>
+        <linkSequence>63</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>true</returnPermited>
+      <initialStateSequence>36</initialStateSequence>
+      <finalStateSequence>54</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Solicitação de Veículos (v1)</processId>
+        <version>1</version>
+        <linkSequence>64</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>36</initialStateSequence>
+      <finalStateSequence>44</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
   </list>
   <list/>
   <list>
@@ -1034,7 +976,7 @@
     var cWKNumProces = getValue(&quot;WKNumProces&quot;);&#xd;
     var mail = hAPI.getCardValue(&quot;mail&quot;);&#xd;
 &#xd;
-    if(sequenceId == 16){&#xd;
+ &#xd;
         if (mail != null &amp;&amp; mail != &quot;&quot;) {&#xd;
             var contraint = [];&#xd;
             var c1 = DatasetFactory.createConstraint(&quot;codigoFormularioPublico&quot;, &quot;teste2&quot;, &quot;teste2&quot;, ConstraintType.MUST);&#xd;
@@ -1057,11 +999,10 @@
 &#xd;
             var dataset = DatasetFactory.getDataset(&quot;ds_dpf_send_email&quot;, null, contraint, null);&#xd;
             hAPI.setCardValue(&quot;linkAcesso&quot;, dataset.getValue(0, &quot;linkInsert&quot;));&#xd;
+     &#xd;
+            &#xd;
         }&#xd;
-    }&#xd;
-    else{&#xd;
-        log.info(&apos;******************************************************* sequenceId : &apos;+ sequenceId);&#xd;
-    }&#xd;
+&#xd;
 }&#xd;
 &#xd;
 </eventDescription>
@@ -1141,7 +1082,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
-        <version>50</version>
+        <version>68</version>
         <linkSequence>22</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1152,7 +1093,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
-        <version>50</version>
+        <version>68</version>
         <linkSequence>22</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1163,7 +1104,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
-        <version>50</version>
+        <version>68</version>
         <linkSequence>22</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -1174,7 +1115,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
-        <version>50</version>
+        <version>68</version>
         <linkSequence>29</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1185,7 +1126,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
-        <version>50</version>
+        <version>68</version>
         <linkSequence>29</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1196,7 +1137,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
-        <version>50</version>
+        <version>68</version>
         <linkSequence>29</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -1207,7 +1148,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
-        <version>50</version>
+        <version>68</version>
         <linkSequence>29</linkSequence>
         <bendSequence>4</bendSequence>
       </processLinkBendPK>
@@ -1218,67 +1159,45 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
-        <version>50</version>
-        <linkSequence>32</linkSequence>
-        <bendSequence>1</bendSequence>
+        <version>68</version>
+        <linkSequence>29</linkSequence>
+        <bendSequence>5</bendSequence>
       </processLinkBendPK>
-      <positionX>342</positionX>
-      <positionY>37</positionY>
+      <positionX>1228</positionX>
+      <positionY>44</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
-        <version>50</version>
-        <linkSequence>33</linkSequence>
+        <version>68</version>
+        <linkSequence>50</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>722</positionX>
-      <positionY>455</positionY>
+      <positionX>508</positionX>
+      <positionY>253</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Solicitação de Veículos (v1)</processId>
-        <version>50</version>
-        <linkSequence>34</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>625</positionX>
-      <positionY>111</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>50</version>
-        <linkSequence>37</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>772</positionX>
-      <positionY>755</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>50</version>
-        <linkSequence>47</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>579</positionX>
-      <positionY>271</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>Solicitação de Veículos (v1)</processId>
-        <version>50</version>
-        <linkSequence>47</linkSequence>
+        <version>68</version>
+        <linkSequence>50</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
       <positionX>253</positionX>
-      <positionY>271</positionY>
+      <positionY>254</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Solicitação de Veículos (v1)</processId>
+        <version>68</version>
+        <linkSequence>62</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>774</positionX>
+      <positionY>754</positionY>
     </ProcessLinkBend>
   </list>
   <list/>
@@ -1291,7 +1210,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Solicitação de Veículos (v1)</processId>
-      <processVersion>50</processVersion>
+      <processVersion>68</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -1301,7 +1220,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Solicitação de Veículos (v1)</processId>
-      <processVersion>50</processVersion>
+      <processVersion>68</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -1314,7 +1233,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Solicitação de Veículos (v1)</processId>
-      <processVersion>50</processVersion>
+      <processVersion>68</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -1324,7 +1243,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Solicitação de Veículos (v1)</processId>
-      <processVersion>50</processVersion>
+      <processVersion>68</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -1334,7 +1253,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Solicitação de Veículos (v1)</processId>
-      <processVersion>50</processVersion>
+      <processVersion>68</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
@@ -1344,7 +1263,57 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Solicitação de Veículos (v1)</processId>
-      <processVersion>50</processVersion>
+      <processVersion>68</processVersion>
+      <stateSequence>16</stateSequence>
+      <appKey>approval</appKey>
+      <appField>title</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>Solicitação de Veículos (v1)</processId>
+      <processVersion>68</processVersion>
+      <stateSequence>16</stateSequence>
+      <appKey>approval</appKey>
+      <appField>description</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>Solicitação de Veículos (v1)</processId>
+      <processVersion>68</processVersion>
+      <stateSequence>16</stateSequence>
+      <appKey>approval</appKey>
+      <appField>highlight</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>Solicitação de Veículos (v1)</processId>
+      <processVersion>68</processVersion>
+      <stateSequence>16</stateSequence>
+      <appKey>approval</appKey>
+      <appField>approve</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>Solicitação de Veículos (v1)</processId>
+      <processVersion>68</processVersion>
+      <stateSequence>16</stateSequence>
+      <appKey>approval</appKey>
+      <appField>reject</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>Solicitação de Veículos (v1)</processId>
+      <processVersion>68</processVersion>
       <stateSequence>23</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -1354,7 +1323,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Solicitação de Veículos (v1)</processId>
-      <processVersion>50</processVersion>
+      <processVersion>68</processVersion>
       <stateSequence>23</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -1364,7 +1333,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Solicitação de Veículos (v1)</processId>
-      <processVersion>50</processVersion>
+      <processVersion>68</processVersion>
       <stateSequence>23</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -1374,7 +1343,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Solicitação de Veículos (v1)</processId>
-      <processVersion>50</processVersion>
+      <processVersion>68</processVersion>
       <stateSequence>23</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -1384,8 +1353,58 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Solicitação de Veículos (v1)</processId>
-      <processVersion>50</processVersion>
+      <processVersion>68</processVersion>
       <stateSequence>23</stateSequence>
+      <appKey>approval</appKey>
+      <appField>reject</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>Solicitação de Veículos (v1)</processId>
+      <processVersion>68</processVersion>
+      <stateSequence>36</stateSequence>
+      <appKey>approval</appKey>
+      <appField>title</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>Solicitação de Veículos (v1)</processId>
+      <processVersion>68</processVersion>
+      <stateSequence>36</stateSequence>
+      <appKey>approval</appKey>
+      <appField>description</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>Solicitação de Veículos (v1)</processId>
+      <processVersion>68</processVersion>
+      <stateSequence>36</stateSequence>
+      <appKey>approval</appKey>
+      <appField>highlight</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>Solicitação de Veículos (v1)</processId>
+      <processVersion>68</processVersion>
+      <stateSequence>36</stateSequence>
+      <appKey>approval</appKey>
+      <appField>approve</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>Solicitação de Veículos (v1)</processId>
+      <processVersion>68</processVersion>
+      <stateSequence>36</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
       <description></description>
@@ -1417,24 +1436,6 @@
       <ruleOrder>1</ruleOrder>
       <field>carroOpcao</field>
       <value>alugado</value>
-      <operator>1</operator>
-      <valueType>1</valueType>
-    </ConditionProcessAutomaticRules>
-    <ConditionProcessAutomaticRules>
-      <sequence>38</sequence>
-      <expressionOrder>1</expressionOrder>
-      <ruleOrder>1</ruleOrder>
-      <field>maisDiariasSelect</field>
-      <value>nao</value>
-      <operator>1</operator>
-      <valueType>1</valueType>
-    </ConditionProcessAutomaticRules>
-    <ConditionProcessAutomaticRules>
-      <sequence>38</sequence>
-      <expressionOrder>2</expressionOrder>
-      <ruleOrder>1</ruleOrder>
-      <field>maisDiariasSelect</field>
-      <value>sim</value>
       <operator>1</operator>
       <valueType>1</valueType>
     </ConditionProcessAutomaticRules>
