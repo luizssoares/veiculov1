@@ -91,6 +91,14 @@ function enableFields(form){
 		form.setEnabled("linkAcesso",false);
 		
 	break;
+	
+	case 23:
+		form.setEnabled("usoSede",false);
+		form.setEnabled("numDiarias2",false);
+		form.setEnabled("numCartao2",false);
+		
+	break;
+	
 		
 	case 36:
 		form.setEnabled("carroLiberado",false);

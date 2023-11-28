@@ -514,7 +514,7 @@
 						</div>
 			               				
 					<div id="resultado2"></div>				
-<!-- espaço -->		<div class="form-group"></div>
+<!-- espaço -->	<div class="form-group row"></div>
 					
 					<div class="row">	
 						<div class="form-group col-md-3">
@@ -560,64 +560,6 @@
 			         </div>					      
 			    </div>										
 
-<!-- Painel de Avaliação -->
-
-						<div class="panel panel-primary" id="painel_avaliacao">
-							<div class="panel-heading">
-								<h3 class="panel-title"><i class="flaticon flaticon-star-active icon-sm" aria-hidden="true"></i> Avaliação</h3>
-							</div>
-							<div class="panel-body">	
-								<div class="form-group row">
-									<div class="col-md-3">
-								          <div class="card">
-								            <div class="card-body">
-								              <ul>
-								                <div aligh="right" id="avalCard">
-								                  <li><strong><u>No campo de observações:</u></strong></li>
-								                  <ol>
-								                    <li>Quaisquer melhorias;</li>
-								                    <li>Quaisquer críticas;</li>
-								                    <li>Quaisquer elogios.</li>
-								                  </ol>
-								                </div>
-								              </ul>
-								            </div>
-								          </div>
-								      </div>
-								     <div class="form-group col-md-2" id="dataAval">
-											<label for="dataAval"><i class="fluigicon fluigicon-calendar icon-xs" aria-hidden="true"></i>
-											Data da avaliação</label>
-												<input type="text" name="dataAval" class="form-control" readonly>
-									</div>								      
-								  </div>			    										
-								<div class=" form-group row">
-									<div class="col-md-3">
-										<div class="form-group" id="obs">			
-											<label for="requisitante"><i class="fluigicon fluigicon-user-comment icon-sm" aria-hidden="true"></i>
-											Observações</label>
-											<span class="required text-danger">
-											<strong>*</strong>
-											</span>
-											<textarea class="form-control" id="obs" name="obs" rows="6" cols="5"></textarea>
-										</div>
-									</div>																																						
-									<div class="col-md-2">
-									    <label for="aval"><i class="fluigicon fluigicon-user-selection icon-sm" aria-hidden="true"></i> Avaliação do Processo</label>
-									    <span class="required text-danger">
-									        <strong>*</strong>
-									    </span>
-									    <select name="aval" id="avalSelect">
-									    	<option value="0">Selecione</option>
-									        <option value="1" data-color="green">Excelente</option>
-									        <option value="2" data-color="blue">Bom</option>
-									        <option value="3" data-color="gray">Neutro</option>
-									        <option value="4" data-color="orange">Ruim</option>
-									        <option value="5" data-color="red">Péssimo</option>
-									    </select>
-									</div>
-								</div>
-						</div>
-					</div>			
 
 <!-- Painel decisão USO -->
 
@@ -709,7 +651,7 @@
 																																																															
 											<div class="col-md-5">
 												<label for="linkAcesso">link de acesso</label>												
-												<input type="text" name="linkAcesso2" id="linkAcesso2" class="form-control">
+												<input type="text" name="linkAcesso2" id="linkAcesso2" class="form-control" readonly>
 											</div>											
 										</div>
 								    </div>
@@ -797,7 +739,7 @@
 											</div>																																																												
 											<div class="col-md-5">
 												<label for="linkAcesso">link de acesso</label>												
-												<input type="text" name="linkAcesso" id="linkAcesso" class="form-control">
+												<input type="text" name="linkAcesso" id="linkAcesso" class="form-control" readonly>
 											</div>											
 										</div>																							
 							    </div>
@@ -1021,83 +963,151 @@
 					        <h3 class="panel-title"><i class="flaticon flaticon-circle-plus icon-sm" aria-hidden="true"></i>
 					         Adição de Diárias (OPCIONAL)</h3>
 					    </div>
-					    <div class="panel-body">
-					    	<div class="form-group row">					        				               
-								<div class="col-md-2">
-									<div>
-										<label>Necessita de diárias? Selecione, somente se NECESSÁRIO:</label>
-									</div> 	
-						            <select name="maisDiariasSelect" id="maisDiariasSelect">
-						                <option value=""></option>
-						                <option value="nao">NÃO</option>
-						                <option value="sim">SIM</option>
-						            </select>		               
-						        </div>
-					        </div> 
+					    <div class="panel-body">				  
+					        <div class="form-group row">
+					            <div class="col-md-4" id="cardLocadora">
+								      <div class="panel panel-primary">
+								        <div class="panel-body">
+								          <div class="card" id="cardLocadora">
+								            
+								              <h3 class="card-title">
+								                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+								                <lord-icon src="https://cdn.lordicon.com/wdqztrtx.json" trigger="loop" colors="primary:#FFA500" style="width: 25px; height: 25px; padding-top: 4px;"></lord-icon>
+								                Atenção!
+								              </h3>
+								              <ul>
+								                <div id="ad">
+								                  <li><strong><u>Somente preencha os campos abaixo caso deseja adicionar diárias</u></strong></li>
+								                  <ol>
+								                    <li>1. Digite a quantidade de diárias desejadas e o E-mail da locadora;</li>
+								                    <li>2. Em seguida, clique no botão de enviar e selecione a próxima atividade "Adicionar as diárias ao contrato de aluguel";</li>
+								                    <li>3. Clique no botão de enviar para dar sequência ao fluxo.</li>
+								                  </ol>								                  
+								                </div>
+								              </ul>
+								            
+								          </div>
+								        </div>
+								      </div>
+								    </div>
+							</div>
+					        
 					        <div class="form-group row">
 						        <div class="col-md-2" id="qtdMaisDiaria">
 						        	<div>
-									<label for="qtdMaisDiaria">Digite quantas diárias a mais será necessário:</label>
+									<label for="qtdMaisDiaria">Digite a quantidade de diárias:</label>
 									</div>
-									<input type="text" name="qtdMaisDiaria1" id="qtdMaisDiaria1" class="form-control" mask="00" placeholder="Somente números">
+										<input type="text" name="qtdMaisDiaria1" id="qtdMaisDiaria1" class="form-control" mask="00" placeholder="Somente números">
+						       		<div>
+						        	<label for="mail3">Email Locadora:</label>
+						        	</div>
+						        		<input type="text" name="mail3" id="mail3" class="form-control" placeholder="Digite o email completo">					 
 						        </div>
+						        
+						        <div class="form-group row">
+						        	<div class="col-md-2" id="linkAcesso3">
+						        		<label for="linkAcesso3">Link de Acesso:</label>		        	
+						        		<input type="text" name="linkAcesso3" id="linkAcesso3" class="form-control" readonly>
+						        	</div>	
+						       	</div>	       
 					        </div>
+					        
 					    </div>
 					</div>
 					
+					
+<!-- Painel de Avaliação -->
+
+						<div class="panel panel-primary" id="painel_avaliacao">
+							<div class="panel-heading">
+								<h3 class="panel-title"><i class="flaticon flaticon-star-active icon-sm" aria-hidden="true"></i> Avaliação</h3>
+							</div>
+							<div class="panel-body">	
+								<div class="form-group row">
+									<div class="col-md-3">
+								          <div class="card">
+								            <div class="card-body">
+								              <ul>
+								                <div aligh="right" id="avalCard">
+								                  <li><strong><u>No campo de observações:</u></strong></li>
+								                  <ol>
+								                    <li>Quaisquer melhorias;</li>
+								                    <li>Quaisquer críticas;</li>
+								                    <li>Quaisquer elogios.</li>
+								                  </ol>
+								                </div>
+								              </ul>
+								            </div>
+								          </div>
+								      </div>
+								     <div class="form-group col-md-2" id="dataAval">
+											<label for="dataAval"><i class="fluigicon fluigicon-calendar icon-xs" aria-hidden="true"></i>
+											Data da avaliação</label>
+												<input type="text" name="dataAval" class="form-control" readonly>
+									</div>								      
+								  </div>			    										
+								<div class=" form-group row">
+									<div class="col-md-3">
+										<div class="form-group" id="obs">			
+											<label for="requisitante"><i class="fluigicon fluigicon-user-comment icon-sm" aria-hidden="true"></i>
+											Observações</label>
+											<span class="required text-danger">
+											<strong>*</strong>
+											</span>
+											<textarea class="form-control" id="obs" name="obs" rows="6" cols="5"></textarea>
+										</div>
+									</div>																																						
+									<div class="col-md-1">
+									    <label for="aval"><i class="fluigicon fluigicon-user-selection icon-sm" aria-hidden="true"></i> Avaliação</label>
+									    <span class="required text-danger">
+									        <strong>*</strong>
+									    </span>
+									    <select name="aval" id="avalSelect">
+									    	<option value="0">Selecione</option>
+									        <option value="1" data-color="green">Excelente</option>
+									        <option value="2" data-color="blue">Bom</option>
+									        <option value="3" data-color="gray">Neutro</option>
+									        <option value="4" data-color="orange">Ruim</option>
+									        <option value="5" data-color="red">Péssimo</option>
+									    </select>
+									</div>
+								</div>
+						</div>
+					</div>								
 								
 </form>
 </div>
 </body>	
 
-					<script>
-					    // Adiciona um ouvinte de evento para o evento 'input' no campo de texto
-					    document.getElementById('placaLiberado').addEventListener('input', function () {
-					        // Obtém o valor atual do campo de texto
-					        let inputValue = this.value;
-					
-					        // Remove caracteres não alfanuméricos (exceto letras e números)
-					        inputValue = inputValue.replace(/[^a-zA-Z0-9]/g, '');
-					
-					        // Formata o valor como desejado (por exemplo, AAA-AAAA)
-					        let formattedValue = inputValue.slice(0, 3) + '-' + inputValue.slice(3);
-					
-					        // Define o valor formatado de volta no campo de texto
-					        this.value = formattedValue;
-					    });
-					</script>
+			
 
-
-
-
-				 	<script>
-				 	function publicForm() {
-				 	    var aluguelCarro = document.getElementById("condutorUSO");
-				 	    var aluguelVMO = document.getElementById("carroPesadoUso");
-				 	    var painelCarro1 = document.getElementById("painel_locadora");
-				 	    var painelVMO1= document.getElementById("painel_locadora2");
-				 	    var painelCarro2 = document.getElementById("painelUso");
-				 	    var painelVMO2 = document.getElementById("painelUso2");
-
-				 	    painelCarro1.style.display = "none";
-				 	    painelCarro2.style.display = "none";
-				 	    painelVMO1.style.display = "none";
-				 	    painelVMO2.style.display = "none";
-
-				 	    if(aluguelCarro != null) {
-				 	        painelCarro1.style.display = "block";
-				 	        painelCarro2.style.display = "block";
-				 	    } else if(aluguelVMO != null) {
-				 	        painelVMO1.style.display = "block";
-				 	        painelVMO2.style.display = "block";
-				 	    }
-				 	}
-				 	window.addEventListener("load", function() {
-				 	    publicForm();
-				 	});
-
-
+				 	<script type="text/javascript">
 				 	
+				 	function publicFormFINAL() {
+				 		var mailCarro = document.getElementById("mail").value;
+				 		var mailVmo = document.getElementById("mail2").value;				 		
+				 		var painelUso = document.getElementById("painelUso");
+					 	var painelUso2 = document.getElementById("painelUso2");
+					 	var painelLocadora = document.getElementById("painel_locadora");
+					 	var painelLocadora2 = document.getElementById("painel_locadora2");
+					 	
+					 	painelUso.style.display = "none";
+			 	        painelUso2.style.display = "none";
+			 	        painelLocadora.style.display = "none";
+			 	        painelLocadora2.style.display = "none";
+			 	        
+			 	        
+			 	        if( mailCarro.indexOf("@") !== -1) {
+			 	        	painelUso.style.display = "block";
+			 	            painelLocadora.style.display = "block";
+			 	        } else if ( mailVmo.indexOf("@") !== -1) {
+			 	        	painelUso2.style.display = "block";
+			 	            painelLocadora2.style.display = "block";
+			 	        }      	        
+				 	}
+				 	
+				 	window.addEventListener("load", publicFormFINAL);
+
 				
 					function painelHide() {
 					    var panel = ["cabecalho", "alerta", "painelDemandante", "painelViagem", "painel_avaliacao", 
@@ -1106,7 +1116,7 @@
 	
 					    if (parent.WCMAPI.getUserLogin() == null) {
 					        for (var i = 0; i < panel.length; i++) {
-					        	if (i == 1 || i == 4 || i == 7 || i == 2 || i == 3 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12) {
+					        	if (i == 1 || i == 4 || i == 7 || i == 2 || i == 3 || i == 8 || i == 9 || i == 10 || i == 11) {
 					            document.getElementById(panel[i]).style.display = 'none';
 					        	}
 					        }

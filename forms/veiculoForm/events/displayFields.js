@@ -81,7 +81,6 @@ function displayFields(form,customHTML){
 		form.setVisibleById("painelViagem", false);
 		form.setVisibleById("painelUso", false);
 		form.setVisibleById("painel_locadora", false);
-		form.setVisibleById("painelUsoProprio", false);
 		form.setVisibleById("cardInfo", false);
 		form.setVisibleById("cardDemandante", false);
 		form.setVisibleById("painel_usuario", false);
@@ -145,6 +144,7 @@ function displayFields(form,customHTML){
 		form.setVisibleById("painel_dotacao", false);
 		form.setVisibleById("painelDecisaoUso", false);
 		form.setVisibleById("painelUso2", false);
+		form.setVisibleById("cardLocadora", false);
 		
 	break;
 	

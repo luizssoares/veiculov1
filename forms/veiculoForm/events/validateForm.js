@@ -159,6 +159,15 @@ function validateForm(form) {
 		 }
 	 }
 	 
+	 if (Now_State == 23) {
+		 if(form.getValue("obs") == "") {
+			 msg += "\n Preencha o campo OBSERVAÇÕES"
+		 }
+		 if(form.getValue("avalSelect") === "0") {
+			 msg += "\n Preencha o campo AVALIAÇÃO"
+		 }
+	 }
+	 
 	 
 	 
 	 
@@ -168,7 +177,7 @@ function validateForm(form) {
 		 if(form.getValue("obs") == "") {
 			 msg += "\n Preencha o campo OBSERVAÇÕES"
 		 }
-		 if(form.getValue("avalSelect") == "") {
+		 if(form.getValue("avalSelect") == "0") {
 			 msg += "\n Preencha o campo AVALIAÇÃO"
 		 }
 	 }

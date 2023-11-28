@@ -455,12 +455,12 @@ function gasolina(i) {
 
  /***********COR DAS OPÇÕES DE AVALIAÇÃO****************/
 
-document.getElementById('avalSelect').addEventListener('change', function() {
+/*document.getElementById('avalSelect').addEventListener('change', function() {
     var selectedOption = this.options[this.selectedIndex];
     var color = selectedOption.getAttribute('data-color');
        
     this.style.backgroundColor = color;
-});
+});*/
 
 
 /***********ESCOLHA DO SUPERIOR******************/
@@ -516,27 +516,6 @@ function formatCartao(input) {
         input.value = 'COR-' + value;
     }
 }
-
-
-
-/*********** Controla Campos Necessidade de mais diárias******************/
-
-function mostrarOcultarCampo() {
-    var select = document.getElementById("maisDiariasSelect");
-    var campoQtdMaisDiaria = document.getElementById("qtdMaisDiaria");
-
-    if (select.value === "sim") {
-        campoQtdMaisDiaria.style.display = "block"; 
-    } else {
-        campoQtdMaisDiaria.style.display = "none"; 
-    }
-}
-
-var select = document.getElementById("maisDiariasSelect");
-
-select.addEventListener("change", mostrarOcultarCampo);
-mostrarOcultarCampo();
-
 
 
 /*********** Data******************/

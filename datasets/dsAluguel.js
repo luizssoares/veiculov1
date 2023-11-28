@@ -17,23 +17,3 @@ function createDataset(fields, constraints, sortFields) {
 
 
 
-/*var settings = {
-		source: {
-			url: parent.WCMAPI.getServerURL() + "/digtedpfweb/v1/rest/proxyDatasetFilter/" + organizationId + "?datasetId=ds_dpf_getDatasetFilter&filterFields=dpfDatasetId,100&searchField=colleagueName&",
-			contentType: 'application/json',
-			root: 'content',
-			pattern: '',
-			limit: 2,
-			offset: 2,
-			patternKey: 'searchValue',
-			limitkey: 'limit',
-			offsetKey: 'offset'
-		},
-		displayKey: 'colleagueName',
-		multiSelect: false,
-		style: {
-			autocompleteTagClass: 'tag-gray',
-			tableSelectedLineClass: 'info'
-		}
-	};
-	_this.filter = FLUIGC.filter('#usuario', settings);*/
