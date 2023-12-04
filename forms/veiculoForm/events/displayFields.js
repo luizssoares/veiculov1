@@ -5,7 +5,7 @@ function displayFields(form,customHTML){
 	var numProcesso = getValue("WKNumProces");
 	
 	form.setHidePrintLink(true);
-	form.setValue("cmb_NomeSolicitante", usuario);	
+	//form.setValue("cmb_NomeSolicitante", usuario);	
 	form.setValue("processo", numProcesso);
 	form.setValue("dataSolic", data.format(new Date()));
 	form.setValue("dataAval", data.format(new Date()));
@@ -14,6 +14,7 @@ function displayFields(form,customHTML){
 	switch(Now_State) {
 	
 	case 0:
+		form.setValue("cmb_NomeSolicitante", usuario);	
 		form.setVisibleById("painel_avaliacao", false);
 		form.setVisibleById("painelUso", false);
 		form.setVisibleById("painelUsoProprio", false);

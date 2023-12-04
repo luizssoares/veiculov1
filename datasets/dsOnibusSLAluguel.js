@@ -17,7 +17,7 @@ function createDataset(fields, constraints, sortFields) {
     dataset.addRow(new Array("Autazes", "12.215.00"));
     dataset.addRow(new Array("Novo Airão", "10.378.67"));
     dataset.addRow(new Array("Silves", "17.115.00"));
-    dataset.addRow(new Array("Puraquequara", "0.000"));
+    dataset.addRow(new Array("Puraquequara", "2.368.32"));
     dataset.addRow(new Array("Vila do Engenho", "10.126.67"));
     dataset.addRow(new Array("Cacau Pirera", "3.348.33"));
   

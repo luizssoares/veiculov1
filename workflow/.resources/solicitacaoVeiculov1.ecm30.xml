@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <version>14</version>
+      <version>20</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>377602</formId>
@@ -691,7 +691,7 @@
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>14</version>
+        <version>20</version>
         <sequence>12</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -703,7 +703,7 @@
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
         <expressionOrder>2</expressionOrder>
-        <version>14</version>
+        <version>20</version>
         <sequence>12</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -715,7 +715,7 @@
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
         <expressionOrder>3</expressionOrder>
-        <version>14</version>
+        <version>20</version>
         <sequence>12</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -1136,7 +1136,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>22</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1147,7 +1147,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>22</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1158,7 +1158,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>22</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -1169,7 +1169,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>29</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1180,7 +1180,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>29</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1191,7 +1191,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>29</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -1202,7 +1202,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>29</linkSequence>
         <bendSequence>4</bendSequence>
       </processLinkBendPK>
@@ -1213,7 +1213,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>29</linkSequence>
         <bendSequence>5</bendSequence>
       </processLinkBendPK>
@@ -1224,7 +1224,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>50</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1235,7 +1235,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>50</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1246,7 +1246,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>52</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1257,7 +1257,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>52</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1268,7 +1268,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>60</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1279,7 +1279,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>62</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1290,7 +1290,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>64</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1301,7 +1301,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>64</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1319,7 +1319,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -1329,11 +1329,14 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
-      <description>@[form:cmb_NomeSolicitante], solicitou um veículo para o destino @[form:destino], com a justificativa de: @[form:justificativa]&#xd;
+      <description>Solicita um veículo para o destino @[form:destino], com a justificativa de: @[form:justificativa]&#xd;
+&#xd;
+&#xd;
+&#xd;
 &#xd;
 &#xd;
 </description>
@@ -1342,7 +1345,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -1352,7 +1355,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -1362,7 +1365,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
@@ -1372,7 +1375,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>16</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -1382,7 +1385,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>16</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -1392,7 +1395,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>16</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -1402,7 +1405,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>16</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -1412,7 +1415,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>16</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
@@ -1422,7 +1425,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>23</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -1432,7 +1435,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>23</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -1442,7 +1445,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>23</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -1452,7 +1455,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>23</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -1462,7 +1465,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>23</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
@@ -1472,7 +1475,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>36</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -1482,7 +1485,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>36</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -1492,7 +1495,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>36</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -1502,7 +1505,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>36</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -1512,7 +1515,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>14</processVersion>
+      <processVersion>20</processVersion>
       <stateSequence>36</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>

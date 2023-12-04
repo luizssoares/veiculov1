@@ -39,6 +39,7 @@
 	<div class="paragraph-is-required system-message-information alert alert-warning" role="alert" id="alerta">Todos os campos com * são de preenchimento obrigatório.</div>
 			
 <!-- Painel Demandante -->
+											<input type="hidden" name="hd_nomeSolicitante" id="nomeSolicitante">
 											<input type="hidden" name="hd_numSuperior" id="numSuperior">
 											<input type="hidden" name="hdn_lastState" id="hdn_lastState">
 											<input type="hidden" name="hdn_State" id="hdn_State">
@@ -592,29 +593,33 @@
 								        <h3 class="panel-title"><i class="flaticon flaticon-airport-shuttle icon-sm" aria-hidden="true"></i>
 								         Unidade de Suporte Operacional - USO</h3>
 								    </div>
-								    <div class="panel-body">							    							        
-							        	<div class="form-group col-md-2">
-											<label for="carroPesadoUso">Tipo de Veículo:</label>
-											<input type="text" name="carroPesadoUso" id="carroPesadoUso" class="form-control" readonly>
-										</div>
-										<div class="form-group col-md-2">
-											<label for="lugarPesadoUso">Lugar:</label>
-											<input type="text" name="lugarPesadoUso" id="lugarPesadoUso" class="form-control" readonly>
-										</div>	
-										<div class="form-group col-md-2">
-											<label for="destinoPesadoUso">Destino:</label>
-											<input type="text" name="destinoPesadoUso" id="destinoPesadoUso" class="form-control" readonly>
-										</div>																													
-									<div class="form-group row">
-									    <div class="col-md-2">
-									        <label for="dataRetiradaPesadoUso">Retirada do Veículo</label>
-									        <input type="datetime-local" class="form-control" name="dataRetiradaPesadoUso" id="dataRetiradaPesadoUso" readonly>
-									    </div>
-									    <div class="col-md-2">
-									        <label for="dataRetornoPesadoUso">Devolução do Veículo</label>
-									        <input type="datetime-local" class="form-control" name="dataRetornoPesadoUso" id="dataRetornoPesadoUso" readonly>
-									    </div>
-									</div>									
+								    <div class="panel-body">
+									    <div class="row">							    							        
+								        	<div class="form-group col-md-2">
+												<label for="carroPesadoUso">Tipo de Veículo:</label>
+												<input type="text" name="carroPesadoUso" id="carroPesadoUso" class="form-control" readonly>
+											</div>
+											<div class="form-group col-md-2">
+												<label for="lugarPesadoUso">Lugar:</label>
+												<input type="text" name="lugarPesadoUso" id="lugarPesadoUso" class="form-control" readonly>
+											</div>	
+											<div class="form-group col-md-2">
+												<label for="destinoPesadoUso">Destino:</label>
+												<input type="text" name="destinoPesadoUso" id="destinoPesadoUso" class="form-control" readonly>
+											</div>																													
+										    <div class="col-md-2">
+										        <label for="dataRetiradaPesadoUso">Retirada do Veículo</label>
+										        <input type="datetime-local" class="form-control" name="dataRetiradaPesadoUso" id="dataRetiradaPesadoUso" readonly>
+										    </div>
+										    <div class="col-md-2">
+										        <label for="dataRetornoPesadoUso">Devolução do Veículo</label>
+										        <input type="datetime-local" class="form-control" name="dataRetornoPesadoUso" id="dataRetornoPesadoUso" readonly>
+										    </div>
+										    <div class="form-group col-md-1">
+												<label for="processoUso">Nº Processo:</label>							
+												<input type="text" name="numMyweb2" id="numMyweb2" class="form-control" readonly>
+											</div>
+										</div>									
 									<div class="row">	
 										<div class="form-group col-md-3">
 											<label for="responsavelUso">Responsável:</label>
@@ -629,7 +634,7 @@
 												<strong>*</strong>
 												</span>
 											<input type="text" name="numTelefoneUso" id="numTelefoneUso" class="form-control" readonly>
-										</div>
+										</div>									
 									</div>																						
 									<div class="row">	
 										<div class="col-md-4">
@@ -656,7 +661,7 @@
 										</div>
 								    </div>
 								</div>
-
+ 
 
 <!-- Painel USO (ALUGAR CARRO) -->
 
@@ -686,6 +691,10 @@
 								                    <strong>*</strong>
 								                </span>
 											<input type="text" name="cnhVali" id="cnhVali" class="form-control" mask="00/00/0000" readonly>
+										</div>
+										<div class="form-group col-md-1">
+											<label for="processoUso">Nº Processo:</label>							
+											<input type="text" name="numMyweb" id="numMyweb" class="form-control" readonly>
 										</div>																																							
 									</div>								    
 						    	<div class="form-group row">						    	
@@ -709,7 +718,7 @@
 							                    <strong>*</strong>
 							               		</span>
 											<input type="text" name="numDiarias" id="numDiarias" class="form-control" mask="00">
-										</div>
+										</div>																							
 										<div class="form-group col-md-2">
 										    <label for="numCartao">Cartão</label>
 										    <span class="required text-danger"><strong>*</strong></span>
@@ -1185,6 +1194,7 @@
 					    var valorDestino = document.getElementById("destino").value;
 					    var valorResponsavel = document.getElementById("responsavel").value;
 					    var valorTelefone = document.getElementById("numTelefone").value;
+					    var numeroMyWeb = document.getElementById("processoUso").value;
 
 					    document.getElementById("condutorUSO").value = valorCondutor;
 					    document.getElementById("numCnhUSO").value = valorCnh;
@@ -1195,7 +1205,9 @@
 					    document.getElementById("processoUso").value = valorProcesso;		    
 					    document.getElementById("destinoUso").value = valorDestino; 
 					    document.getElementById("responsavelUso").value = valorResponsavel;
-						document.getElementById("numTelefoneUso").value = valorTelefone;	
+						document.getElementById("numTelefoneUso").value = valorTelefone;
+						document.getElementById("numMyweb").value = numeroMyWeb;
+						document.getElementById("numMyweb2").value = numeroMyWeb;
 					    
  						/////////////////////////////////////////////////////////////			
 					  	
