@@ -214,7 +214,7 @@
 					                <div>
 					                    <select name="escolhaPainel" id="escolhaPainel">
 					                        <option value="">Selecione</option>
-					                        <option value="painelViagem">Alugar Carro ou Usar Veículo Próprio do Sebrae</option>
+					                        <option value="painelViagem">Alugar Carro ou Pick-up</option>
 					                        <option value="painelViagem2">Alugar Micro-ônibus, Van ou Ônibus</option>
 					                    </select>
 					                </div>
@@ -291,14 +291,14 @@
 						</div>																							
 						<div class="form-group row">										
 							<div class="col-md-5">
-				                <label for="carroOpcao">Carro Alugado ou Próprio?</label>
+				                <label for="carroOpcao">Tipo de carro:</label>
 				                <span class="required text-danger">
 				                    <strong>*</strong>
 				                </span>
 				                <div>
 				                    <select name="carroOpcao" id="carroOpcao">
 				                    	<option value="">Selecione</option>
-				                        <option value="proprio">Próprio</option>
+				                   <!-- <option value="proprio">Próprio</option> -->
 				                        <option value="alugado">Alugado</option>
 				                    </select>
 				                </div>
@@ -362,7 +362,8 @@
 						            <input class="form-control" type="text" readonly name="qtDia" id="qtDia">
 						        </div>
 						    </div>
-						</div>		
+						</div>
+<!-- n mexer -->		<div class="form-group row"></div>								
 						<div class="form-group row" id="camposAluguelVeiculo2">
 						    <div class="col-md-2 input-default">
 						        <label for="dat_DataSaida" class="label label-primary">Data e Hora de Saída</label>
@@ -414,7 +415,7 @@
 					</div>	
 				</div>
 			
-								
+						
 
 <!-- Painel Van / Micro / Onibus Leito / Onibus SL  -->
 
@@ -575,8 +576,8 @@
 				                <div>
 				                    <select name="escolhaPainelUso" id="escolhaPainelUso">
 				                        <option value="">Selecione</option>
-				                        <option value="painelUso">Alugar Carro</option>
-				                        <option value="painelUso2">Alugar Micro-ônibus, Van ou Ônibus</option>
+				                        <option value="painelUso">Alugar Carro ou Pick-up</option>
+				                        <option value="painelUso2">Alugar Van, Ônibus ou Micro Ônibus</option>
 				                    </select>
 				                </div>
 				            </div>
@@ -606,16 +607,8 @@
 											<div class="form-group col-md-2">
 												<label for="destinoPesadoUso">Destino:</label>
 												<input type="text" name="destinoPesadoUso" id="destinoPesadoUso" class="form-control" readonly>
-											</div>																													
-										    <div class="col-md-2">
-										        <label for="dataRetiradaPesadoUso">Retirada do Veículo</label>
-										        <input type="datetime-local" class="form-control" name="dataRetiradaPesadoUso" id="dataRetiradaPesadoUso" readonly>
-										    </div>
-										    <div class="col-md-2">
-										        <label for="dataRetornoPesadoUso">Devolução do Veículo</label>
-										        <input type="datetime-local" class="form-control" name="dataRetornoPesadoUso" id="dataRetornoPesadoUso" readonly>
-										    </div>
-										    <div class="form-group col-md-1">
+											</div>																																						   
+										    <div  class="form-group col-md-1">
 												<label for="processoUso">Nº Processo:</label>							
 												<input type="text" name="numMyweb2" id="numMyweb2" class="form-control" readonly>
 											</div>
@@ -635,7 +628,18 @@
 												</span>
 											<input type="text" name="numTelefoneUso" id="numTelefoneUso" class="form-control" readonly>
 										</div>									
-									</div>																						
+									</div>
+									<div class="row">
+										 <div class="col-md-2">
+										        <label for="dataRetiradaPesadoUso">Retirada do Veículo</label>
+										        <input type="datetime-local" class="form-control" name="dataRetiradaPesadoUso" id="dataRetiradaPesadoUso" readonly>
+										    </div>
+										    <div class="col-md-2">
+										        <label for="dataRetornoPesadoUso">Devolução do Veículo</label>
+										        <input type="datetime-local" class="form-control" name="dataRetornoPesadoUso" id="dataRetornoPesadoUso" readonly>
+										    </div>
+									</div>
+									<div class="form-group row"></div>																														
 									<div class="row">	
 										<div class="col-md-4">
 											<div class="form-group">
@@ -649,13 +653,13 @@
 										</div>
 									</div> 						
 									<div class="form-group row">	
-											<div class="col-md-5">
+											<div class="col-md-4">
 												<label for="mail">E-mail da locadora:</label>												
 												<input type="text" name="mail2" id="mail2" class="form-control">
 											</div>
 																																																															
-											<div class="col-md-5">
-												<label for="linkAcesso">link de acesso</label>												
+											<div class="col-md-4">
+												<label for="linkAcesso">Link de acesso</label>												
 												<input type="text" name="linkAcesso2" id="linkAcesso2" class="form-control" readonly>
 											</div>											
 										</div>
@@ -712,18 +716,18 @@
 								                </span>
 											<input type="text" name="destinoUso" id="destinoUso" class="form-control" readonly>
 										</div>
-									    <div class="form-group col-md-2">
+										<div class="form-group col-md-2">
+										    <label for="numCartao">Cartão</label>
+										    <span class="required text-danger"><strong>*</strong></span>
+										    <input type="text" name="numCartao" id="numCartao" class="form-control" placeholder="Ex: COR-1234" oninput="formatCartao(this)">
+										</div>							
+									    <div class="form-group col-md-1">
 											<label for="numDiarias">Nº de Diárias</label>
 												<span class="required text-danger">
 							                    <strong>*</strong>
 							               		</span>
 											<input type="text" name="numDiarias" id="numDiarias" class="form-control" mask="00">
-										</div>																							
-										<div class="form-group col-md-2">
-										    <label for="numCartao">Cartão</label>
-										    <span class="required text-danger"><strong>*</strong></span>
-										    <input type="text" name="numCartao" id="numCartao" class="form-control" placeholder="Ex: COR-1234" oninput="formatCartao(this)">
-										</div>										 									
+										</div>																					 									
 									</div>								
 									<div class="form-group row">
 									    <div class="col-md-2 input-default" id="">
@@ -742,12 +746,12 @@
 									    </div>
 									</div>						
 										<div class="form-group row">	
-											<div class="col-md-5">
+											<div class="col-md-4">
 												<label for="mail">E-mail da locadora:</label>												
 												<input type="text" name="mail" id="mail" class="form-control">
 											</div>																																																												
-											<div class="col-md-5">
-												<label for="linkAcesso">link de acesso</label>												
+											<div class="col-md-4">
+												<label for="linkAcesso">Link de acesso</label>												
 												<input type="text" name="linkAcesso" id="linkAcesso" class="form-control" readonly>
 											</div>											
 										</div>																							
