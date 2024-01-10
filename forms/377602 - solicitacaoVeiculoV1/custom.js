@@ -254,6 +254,7 @@ function calcularValorTotal2() {
 
     if (!isNaN(diaria) && diferencaEmDias >= 0) {
         const valorTotal = diferencaEmDias * diaria;
+        document.getElementById("resultado_vmo").value = valorTotal;
         return valorTotal;
     } else {
         return 0;
@@ -419,10 +420,11 @@ function calcularValorTotal() {
     const diferencaEmDias = calcularDiferenca();
     const diferencaEmHoras = diferencaEmDias.horas; 
     const taxaDiaria = parseFloat(qtDiaInput.value); 
-
+    
     if (!isNaN(taxaDiaria)) {
         const diasComHoraExtra = diferencaEmDias.dias + (diferencaEmHoras > 0 ? 1 : 0); 
         const valorTotal = diasComHoraExtra * taxaDiaria;
+        document.getElementById("resultado_carro").value = valorTotal;
         return valorTotal;
     } else {
         return 0; 
