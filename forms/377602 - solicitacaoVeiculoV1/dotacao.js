@@ -271,9 +271,10 @@ function slcAcao(){
     document.getElementById("slc_acao").addEventListener('change', function(){
         var arrayOption = codAcaoUnidade()
         var codAcao = document.getElementById("slc_acao").value
+        var codProjX = document.getElementById("codProjeto").value
         console.log(codAcao)
         for(i = 0; i < arrayOption.length; i++){
-            if(arrayOption[i].NOME == codAcao){
+            if(arrayOption[i].NOME == codAcao && arrayOption[i].CODIGO.split(".")[0] == codProjX ){
                 //console.log("é")
                 document.getElementById("codAcao").value = arrayOption[i].CODIGO
                 break;
@@ -369,9 +370,11 @@ function slcUnidade(){
     document.getElementById("slc_unidade").addEventListener('change', function(){
         var arrayOption = codAcaoUnidade()
         var codUni = document.getElementById("slc_unidade").value
+        //var codAcao = document.getElementById("slc_acao").value
+        var codProjX = document.getElementById("codProjeto").value
         console.log(codUni)
         for(i = 0; i < arrayOption.length; i++){
-            if(arrayOption[i].NOME == codUni){
+            if(arrayOption[i].NOME == codUni && arrayOption[i].CODIGO.split(".")[0] == codProjX ){
                 //console.log("é")
                 document.getElementById("codRecurso").value = document.getElementById("codAcao").value+"."+(arrayOption[i].CODIGO).split(".")[2]
                 break;
