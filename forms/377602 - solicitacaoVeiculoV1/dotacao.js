@@ -4,7 +4,7 @@ function codProjeto(){
 }
 
 function codAcaoUnidade(){
-    var dataset = DatasetFactory.getDataset("dsc_TT", null, null, null);
+    var dataset = DatasetFactory.getDataset("dsc_CentroCusto", null, null, null);
     return dataset.values
 }
 
@@ -156,7 +156,7 @@ function slcProjeto(){
     
   /**************Bloqueia Campo Projeto Baseado no Estado Atual****************/
     
-    else if (Now == 10 || Now == 14 || Now == 15 || Now == 23 || Now == 24 || Now == 42)  {
+    else if (Now == 10 || Now == 14 || Now == 15 || Now == 23 || Now == 24 || Now == 42 || Now == 36)  {
         att = document.createAttribute('readonly')
         vselect.setAttributeNode(att)
     }
@@ -255,7 +255,7 @@ function slcAcao(){
     
     /**************Bloqueia Campo Ação Baseado no Estado Atual****************/  
     
-    else if (Now == 10 || Now == 14 || Now == 15 || Now == 23 || Now == 24 || Now == 42)  {
+    else if (Now == 10 || Now == 14 || Now == 15 || Now == 23 || Now == 24 || Now == 42 || Now == 36)  {
         att = document.createAttribute('readonly')
         vselect.setAttributeNode(att)
     }
@@ -353,7 +353,7 @@ function slcUnidade(){
     
   /**************Bloqueia Campo Unidade Baseado no Estado Atual****************/
     
-    else if (Now == 10 || Now == 14 || Now == 15 || Now == 23 || Now == 24 || Now == 42)  {
+    else if (Now == 10 || Now == 14 || Now == 15 || Now == 23 || Now == 24 || Now == 42 || Now == 36)  {
         att = document.createAttribute('readonly')
         vselect.setAttributeNode(att)
     }

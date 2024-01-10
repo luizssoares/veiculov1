@@ -89,6 +89,7 @@ function enableFields(form){
 		form.setEnabled("numCnhUSO",false);
 		form.setEnabled("mail",false);
 		form.setEnabled("linkAcesso",false);
+		form.setEnabled("numDiariaPesadoUso",false);
 		
 	break;
 	
@@ -115,6 +116,11 @@ function enableFields(form){
 		form.setEnabled("vmoHoraRetorno",false);
 		form.setEnabled("vmoSaida",false);
 		form.setEnabled("vmoRetorno",false);
+		form.setEnabled("numCartao",false);
+		form.setEnabled("numDiarias",false);
+		form.setEnabled("mail",false);
+		form.setEnabled("mail2",false);
+		form.setEnabled("numDiariaPesadoUso",false);
 
 	break;
 	

@@ -94,8 +94,17 @@ function validateForm(form) {
 			}
 		 if(form.getValue("mail") == "") {
 			 msg += "\nPreencha o campo EMAIL";
-			}
+			}	 
+	 }
 	 
+	 if(Now_State == 14 && escolhaUso =="painelUso2" ) {
+		 if(form.getValue("numDiariaPesadoUso") == "") {
+			 msg += "\nPreencha o campo DIÁRIAS";
+			}
+		 if(form.getValue("mail2") == "") {
+			 msg += "\nPreencha o campo EMAIL";
+			}
+		 
 	 }
 	 
 	 if(Now_State == 16 && escolhaPainelUso == "painelUso") {

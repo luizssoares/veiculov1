@@ -129,9 +129,10 @@ function displayFields(form,customHTML){
 		form.setVisibleById("painel_avaliacao", false);
 		form.setVisibleById("painelUsoProprio", false);
 		form.setVisibleById("alerta", false);
-		form.setVisibleById("painel_dotacao", false);
+//		form.setVisibleById("painel_dotacao", false);
 		form.setVisibleById("painelDecisaoUso", false);
 		form.setVisibleById("cardLocadora", false);	
+		form.setVisibleById("cardDemandante", false);
 	
 	break;
 	

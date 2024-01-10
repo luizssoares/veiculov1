@@ -64,7 +64,7 @@ function mostraPaineisUso() {
         document.getElementById("painelUso2").style.display = "none";
         document.getElementById("painel_locadora2").style.display = "none";
     }
-    if(Now_State == 36 || Now_State == 42 || Now_State == 44 || Now_State == 24 || Now_State == 54) {
+    if(Now_State == 42 || Now_State == 44 || Now_State == 24 || Now_State == 54) {
 		document.getElementById("painelUso").style.display = "none";
 		document.getElementById("painelUso2").style.display = "none";
 	}
