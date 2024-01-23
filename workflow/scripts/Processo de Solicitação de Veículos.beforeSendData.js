@@ -29,10 +29,10 @@
 			customFields[17] = hAPI.getCardValue('dataRetiradaFinal');
 			customFields[18] = hAPI.getCardValue('dataRetornoFinal');
 			customFields[19] = hAPI.getCardValue('placaLiberado');
-			customFields[20] = hAPI.getCardValue('');
+			customFields[20] = hAPI.getCardValue('histdiaria');
 			
-			customFields[21] = hAPI.getCardValue('');
-			customFields[22] = hAPI.getCardValue('');
+			customFields[21] = hAPI.getCardValue('codProjeto');
+			customFields[22] = hAPI.getCardValue('codAcao');
 			customFields[23] = hAPI.getCardValue('');
 			customFields[24] = hAPI.getCardValue('');
 			customFields[25] = hAPI.getCardValue('');
