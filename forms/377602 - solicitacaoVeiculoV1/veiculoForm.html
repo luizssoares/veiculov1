@@ -71,10 +71,10 @@
 								<label for="zm_UnidadeSolicitante">Unidade Solicitante</label>
 								<input type="text" class="form-control" name="cmb_UnidadeSolicitante" id="cmb_UnidadeSolicitante" readonly>
 							</div>
-							<div class="col-md-2" id="dataSolic">
+							<div class="col-md-2">
 								<label for="dataSolic"><i class="fluigicon fluigicon-calendar icon-xs" aria-hidden="true"></i>
 									Data da solicitação</label>
-								<input type="text" name="dataSolic" class="form-control">
+								<input type="text" id="dataSolic" name="dataSolic" class="form-control">
 							</div>
 							<div class="form-group col-md-1">
 								<label for="processoUso">Nº Processo:</label>							
@@ -987,63 +987,102 @@
 
 <!-- Painel de  adição de diárias -->
 				
-					<div class="panel panel-primary" id="painelDiarias">
-					    <div class="panel-heading">
-					        <h3 class="panel-title"><i class="flaticon flaticon-circle-plus icon-sm" aria-hidden="true"></i>
-					         Adição de Diárias (OPCIONAL)</h3>
-					    </div>
-					    <div class="panel-body">				  
-					        <div class="form-group row">
-					            <div class="col-md-4" id="cardLocadora">
-								      <div class="panel panel-primary">
-								        <div class="panel-body">
-								          <div class="card" id="cardLocadora">
-								            
-								              <h3 class="card-title">
-								                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-								                <lord-icon src="https://cdn.lordicon.com/wdqztrtx.json" trigger="loop" colors="primary:#FFA500" style="width: 25px; height: 25px; padding-top: 4px;"></lord-icon>
-								                Atenção!
-								              </h3>
-								              <ul>
-								                <div id="ad">
-								                  <li><strong><u>Somente preencha os campos abaixo caso deseja adicionar diárias</u></strong></li>
-								                  <ol>
-								                    <li>1. Digite a quantidade de diárias desejadas e o E-mail da locadora;</li>
-								                    <li>2. Em seguida, clique no botão de enviar e selecione a próxima atividade "Adicionar as diárias ao contrato de aluguel";</li>
-								                    <li>3. Clique no botão de enviar para dar sequência ao fluxo.</li>
-								                  </ol>								                  
-								                </div>
-								              </ul>
-								            
-								          </div>
-								        </div>
-								      </div>
-								    </div>
-							</div>
-					        
-					        <div class="form-group row">
-						        <div class="col-md-2" id="qtdMaisDiaria">
-						        	<div>
-									<label for="qtdMaisDiaria">Digite a quantidade de diárias:</label>
+<div class="panel panel-primary" id="painelDiarias">
+	<div class="panel-heading">
+		<h3 class="panel-title"><i class="flaticon flaticon-circle-plus icon-sm" aria-hidden="true"></i>
+		Adição de Diárias</h3>
+	</div>
+	<div class="panel-body">
+		<div class="panel panel-primary col-md-6">
+			<div class="panel-heading">
+				<h3 class="panel-title">Painel de Envio para Adicionar Diárias ao Contrato</h3>
+			</div>
+			<div class="panel-body">
+				<div class="form-group row">
+					<div id="cardLocadora">
+						  <div class="panel panel-primary">
+							<div class="panel-body">
+							  <div class="card" id="cardLocadora">
+								
+								  <h3 class="card-title">
+									<script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+									<lord-icon src="https://cdn.lordicon.com/wdqztrtx.json" trigger="loop" colors="primary:#FFA500" style="width: 25px; height: 25px; padding-top: 4px;"></lord-icon>
+									Atenção!
+								  </h3>
+								  <ul>
+									<div id="ad">
+									  <li><strong><u>Somente preencha os campos abaixo caso deseja adicionar diárias</u></strong></li>
+									  <ol>
+										<li>Digite a quantidade de diárias desejadas e o E-mail da locadora;</li>
+										<li>No painel "Histórico", clique em Adicionar e digite novamente a MESMA quantidade de diárias digitadas anteriormente;</li>
+										<li>Em seguida, clique no botão de enviar e selecione a próxima atividade "Adicionar as diárias ao contrato de aluguel";</li>
+										<li>Clique no botão de enviar para dar sequência ao fluxo.</li>
+									  </ol>								                  
 									</div>
-										<input type="text" name="qtdMaisDiaria1" id="qtdMaisDiaria1" class="form-control" mask="00" placeholder="Somente números">
-						       		<div>
-						        	<label for="mail3">Email Locadora:</label>
-						        	</div>
-						        		<input type="text" name="mail3" id="mail3" class="form-control" placeholder="Digite o email completo">					 
-						        </div>
-						        
-						        <div class="form-group row">
-						        	<div class="col-md-2" id="linkAcesso3">
-						        		<label for="linkAcesso3">Link de Acesso:</label>		        	
-						        		<input type="text" name="linkAcesso3" id="linkAcesso3" class="form-control" readonly>
-						        	</div>	
-						       	</div>	       
-					        </div>
-					        
-					    </div>
+								  </ul>
+								
+							  </div>
+							</div>
+						  </div>
 					</div>
-					
+				</div>
+				
+				<div class="form-group row">
+					<div id="qtdMaisDiaria">
+						<div class="col-md-4">
+							<label for="qtdMaisDiaria">Digite a quantidade de diárias:</label>
+							<input type="text" name="qtdMaisDiaria1" id="qtdMaisDiaria1" class="form-control" mask="00" placeholder="Somente números">
+						</div>   					 
+					</div>																		       
+				</div>
+				<div class="form-group row">
+					<div class="col-md-7">
+						<label for="mail3">Email Locadora:</label>
+						<input type="text" name="mail3" id="mail3" class="form-control" placeholder="Digite o email completo">	
+					</div>	
+				</div>
+				<div class="form-group row col-md-9">
+					<div id="linkAcesso3">
+						<label for="linkAcesso3">Link de Acesso:</label>		        	
+						<input type="text" name="linkAcesso3" id="linkAcesso3" class="form-control" readonly>
+					</div>	
+				</div>	
+			</div>
+		</div>
+	
+		<div class="panel panel-primary col-md-6" id="historicoDiaria">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+				Histórico (Controle Interno)</h3>
+			</div>
+		  <div class="panel-body">
+				<div>
+					<div class="form-field table-responsive" data-type="tabledetail" data-show-properties="" data-field-name="tabledetail">
+						<table class="table" cellspacing="0" tablename="hist" noaddbutton="true" nodeletebutton="true">
+							<thead>
+								<tr class="tableHeadRow">
+									<th class="tableColumn">Quantidade de Diárias</th>
+								</tr>
+							</thead>
+							<tbody id="tabelaBody">
+								<tr>
+									<td>
+										<div class="col-md-3">
+											<input type="text" name="histdiaria" id="histdiaria" class="form-control" mask="00" placeholder="Somente números">
+										</div>
+									</td>														
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="form-group">
+						<button type="button" class="btn btn-primary btn-xs" name="inputAdicionar" id="inputAdicionar" onclick="wdkAddChild('hist')">Adicionar</button>
+					</div>
+				</div> 
+			</div>
+		</div>
+	</div>
+</div>
 					
 <!-- Painel de Avaliação -->
 
@@ -1141,11 +1180,11 @@
 					function painelHide() {
 					    var panel = ["cabecalho", "alerta", "painelDemandante", "painelViagem", "painel_avaliacao", 
 					    	"painelUso", "painel_locadora", "painelUsoProprio", "painelViagem2", "painel_usuario", 
-					    	"painel_dotacao", "painelDecisaoUso", "painelDiarias"];
+					    	"painel_dotacao", "painelDecisaoUso", "painelDiarias", "historicoDiaria"];
 	
 					    if (parent.WCMAPI.getUserLogin() == null) {
 					        for (var i = 0; i < panel.length; i++) {
-					        	if (i == 1 || i == 4 || i == 7 || i == 2 || i == 3 || i == 8 || i == 9 || i == 10 || i == 11) {
+					        	if (i == 1 || i == 4 || i == 7 || i == 2 || i == 3 || i == 8 || i == 9 || i == 10 || i == 11 || i == 13) {
 					            document.getElementById(panel[i]).style.display = 'none';
 					        	}
 					        }
