@@ -13,14 +13,14 @@
 			customFields[4] = hAPI.getCardValue('numCartao'); 
 			customFields[5] = hAPI.getCardValue('carroLiberado'); 
 			
-			customFields[6] = hAPI.getCardValue('aval');  //
+			customFields[6] = hAPI.getCardValue("aval");  //
 			customFields[7] = hAPI.getCardValue('responsavel');  
 			customFields[8] = hAPI.getCardValue('destinoPesadoUso'); 
 			customFields[9] = hAPI.getCardValue('vmoLiberado'); 
 			customFields[10] = hAPI.getCardValue('carroPesadoUso');  
 			
 			customFields[11] = hAPI.getCardValue('lugarPesadoUso'); 
-			customFields[12] = hAPI.getCardValue('escolhaPainel'); //
+			customFields[12] = hAPI.getCardValue('escolhaPainel');
 			customFields[13] = hAPI.getCardValue('');
 			customFields[14] = hAPI.getCardValue('');
 			customFields[15] = hAPI.getCardValue('');
@@ -29,10 +29,10 @@
 			customFields[17] = hAPI.getCardValue('dataRetiradaFinal');
 			customFields[18] = hAPI.getCardValue('dataRetornoFinal');
 			customFields[19] = hAPI.getCardValue('placaLiberado');
-			customFields[20] = hAPI.getCardValue('histdiaria');
+			customFields[20] = hAPI.getCardValue('');
 			
-			customFields[21] = hAPI.getCardValue('codProjeto');
-			customFields[22] = hAPI.getCardValue('codAcao');
+			customFields[21] = hAPI.getCardValue('txt_codprojeto');
+			customFields[22] = hAPI.getCardValue('txt_codacao');
 			customFields[23] = hAPI.getCardValue('');
 			customFields[24] = hAPI.getCardValue('');
 			customFields[25] = hAPI.getCardValue('');
@@ -42,12 +42,12 @@
 			customFields[28] = hAPI.getCardValue('');
 			customFields[29] = hAPI.getCardValue('');
 					
-			customFacts[0] = java.lang.Double.parseDouble(hAPI.getCardValue('qtDia')); 
-			customFacts[1] = java.lang.Double.parseDouble(hAPI.getCardValue('numDiarias'));
-			customFacts[2] = java.lang.Double.parseDouble(hAPI.getCardValue('gas')); //
-			customFacts[3] = java.lang.Double.parseDouble(hAPI.getCardValue('qtdMaisDiaria1')); //
-			customFacts[4] = java.lang.Double.parseDouble(hAPI.getCardValue('diariaPesadoUso'));  //
-			customFacts[5] = java.lang.Double.parseDouble(hAPI.getCardValue('numDiariaPesadoUso')); //
+			customFacts[0] = java.lang.Double.parseDouble(hAPI.getCardValue('totalDiarias')); // antes era qtDia
+			customFacts[1] = java.lang.Double.parseDouble(hAPI.getCardValue("numDiarias")); //numero de diarias carro alugado uso
+			customFacts[2] = java.lang.Double.parseDouble(hAPI.getCardValue("diariaPesadoUso")); //
+			customFacts[3] = java.lang.Double.parseDouble(hAPI.getCardValue("numDiariaPesadoUso")); //
+			customFacts[4] = java.lang.Double.parseDouble(hAPI.getCardValue("gas"));  //
+			customFacts[5] = java.lang.Double.parseDouble(hAPI.getCardValue("")); //
 			
 			customFacts[6] = java.lang.Double.parseDouble(hAPI.getCardValue('')); 
 			customFacts[7] = java.lang.Double.parseDouble(hAPI.getCardValue('')); 

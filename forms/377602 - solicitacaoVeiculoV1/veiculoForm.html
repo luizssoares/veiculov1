@@ -9,6 +9,8 @@
 	<script type="text/javascript" src="dotacao.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>	
 	<script type="text/javascript" src="custom.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
 	
 
 	
@@ -46,8 +48,9 @@
 											<input type="hidden" name="hdn_lastState" id="hdn_lastState">
 											<input type="hidden" name="hdn_State" id="hdn_State">
 											<input type="hidden" name="hdn_diretoria" id="hdn_diretoria">
-												
-		
+											<input type="hidden" id="resultado_carro" name="calcularValorTotal" value="">
+											<input type="hidden" id="resultado_vmo" name="calcularValorTotal2" value="">
+																	
 	<div class="panel panel-primary" id="painelDemandante">
 		<div class="panel-heading">
 			<h3 class="panel-title"><i class="flaticon flaticon-person icon-sm" aria-hidden="true"></i> Demandante</h3>
@@ -1052,31 +1055,32 @@
 				<h3 class="panel-title">
 				Histórico (Controle Interno)</h3>
 			</div>
-		  <div class="panel-body">
-				<div>
-					<div class="form-field table-responsive" data-type="tabledetail" data-show-properties="" data-field-name="tabledetail">
-						<table class="table" cellspacing="0" tablename="hist" noaddbutton="true" nodeletebutton="true">
-							<thead>
-								<tr class="tableHeadRow">
-									<th class="tableColumn">Quantidade de Diárias</th>
-								</tr>
-							</thead>
-							<tbody id="tabelaBody">
-								<tr>
-									<td>
-										<div class="col-md-3">
-											<input type="text" name="histdiaria" id="histdiaria" class="form-control" mask="00" placeholder="Somente números">
-										</div>
-									</td>														
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="form-group">
-						<button type="button" class="btn btn-primary btn-xs" name="inputAdicionar" id="inputAdicionar" onclick="wdkAddChild('hist')">Adicionar</button>
-					</div>
-				</div> 
+		<div class="panel-body">
+			<div class="form-group row">
+				<div class="col-md-3">
+					<label>Diária Solicitada 01:</label>
+					<input type="text" name="hist1" id="hist1" class="form-control" mask="00" placeholder="Somente números">
+				</div>   					 													       
 			</div>
+			<div class="form-group row">
+				<div class="col-md-3">
+					<label>Diária Solicitada 02:</label>
+					<input type="text" name="hist2" id="hist2" class="form-control" mask="00" placeholder="Somente números">
+				</div>   					 													       
+			</div>
+			<div class="form-group row">
+				<div class="col-md-3">
+					<label>Diária Solicitada 03:</label>
+					<input type="text" name="hist3" id="hist3" class="form-control" mask="00" placeholder="Somente números">
+				</div>   					 													       
+			</div>
+			<div class="form-group row">
+				<div class="col-md-5">
+					<label>Quantidade TOTAL de DIÁRIAS</label>
+					<input name="totalDiarias" type="text" id="totalDiarias" readonly>
+				</div>	
+			</div>	
+		</div>
 		</div>
 	</div>
 </div>
@@ -1308,6 +1312,9 @@
 						 		}
 						 
 					</script>
+
+
+
 					 									
 	
 </html>

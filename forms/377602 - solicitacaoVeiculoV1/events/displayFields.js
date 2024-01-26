@@ -162,6 +162,15 @@ function displayFields(form,customHTML){
 		form.setVisibleById("cardLocadora", false);
 		
 	break;
+
+	case 66:
+		form.setVisibleById("painelDecisaoUso", false);
+		form.setVisibleById("painel_avaliacao", false);
+		form.setVisibleById("painelDiarias", false);
+		form.setVisibleById("painelUsoProprio", false);
+
+		
+	break;
 	
 	
 	}

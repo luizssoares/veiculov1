@@ -64,11 +64,11 @@ function mostraPaineisUso() {
         document.getElementById("painelUso2").style.display = "none";
         document.getElementById("painel_locadora2").style.display = "none";
     }
-    if(Now_State == 42 || Now_State == 44 || Now_State == 24 || Now_State == 54) {
+    if(Now_State == 42 || Now_State == 44 || Now_State == 24 || Now_State == 54  || Now_State == 66) {
 		document.getElementById("painelUso").style.display = "none";
 		document.getElementById("painelUso2").style.display = "none";
 	}
-    if(Now_State == 24) {
+    if(Now_State == 24 || Now_State == 66) {
 		document.getElementById("painel_locadora").style.display = "none";
 		document.getElementById("painel_locadora2").style.display = "none";
 	}
@@ -525,40 +525,56 @@ function formatCartao(input) {
 
 function pad(valor) {
     return valor.toString().padStart(2, '0');
-}
+} 
 
-function formata(data) {
+ function formata(data) {
     return data.getFullYear() + '-' + pad(data.getMonth() + 1) + '-' + pad(data.getDate())
            + 'T' + pad(data.getHours()) + ':' + pad(data.getMinutes());
 }
 
 var hoje = new Date();
 
-// Bloqueia datas anteriores
 var dataMinima = new Date(hoje);
 
-// Define a data mínima para o início do dia de hoje
 dataMinima.setHours(0, 0, 0, 0);
 
-// Adiciona 48 horas (2 dias)
 var dataMinimaPosterior = new Date(dataMinima);
 dataMinimaPosterior.setHours(dataMinima.getHours() + 48);
 
 var dataMinimaFormatada = formata(dataMinimaPosterior);
 
 window.addEventListener('load', function() {
-    var campo0 = document.querySelector('#dat_DataSaida');
-    var campo1 = document.querySelector('#dat_DataSaida2');
-    var campo2 = document.querySelector('#dat_DataRetorno');
-    var campo3 = document.querySelector('#dat_DataRetorno2');
-    
+    var campo0 = document.getElementById('dat_DataSaida');
+    var campo1 = document.getElementById('dat_DataSaida2');
+    var campo2 = document.getElementById('dat_DataRetorno');
+    var campo3 = document.getElementById('dat_DataRetorno2');
+
     campo0.min = dataMinimaFormatada;
     campo1.min = dataMinimaFormatada;    
     campo2.min = dataMinimaFormatada;
     campo3.min = dataMinimaFormatada;
 
-});
+}); 
 
+
+/*********** Soma o valor da diária solicitada + adição de diária ******************/
+
+function somaDiaria() {
+    var diariauso = parseFloat(document.getElementById("numDiarias").value);
+    var historico1 = parseFloat(document.getElementById("hist1").value) || 0; 
+    var historico2 = parseFloat(document.getElementById("hist2").value) || 0;
+    var historico3 = parseFloat(document.getElementById("hist3").value) || 0;
+    
+    
+    var total = diariauso + historico1 + historico2 + historico3;
+    
+    return total;
+}
+
+window.addEventListener("load", function() {
+    var resultado = somaDiaria();
+    document.getElementById("totalDiarias").value = resultado;
+});
 
 
 

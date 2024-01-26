@@ -156,7 +156,7 @@ function slcProjeto(){
     
   /**************Bloqueia Campo Projeto Baseado no Estado Atual****************/
     
-    else if (Now == 10 || Now == 14 || Now == 15 || Now == 23 || Now == 24 || Now == 42 || Now == 36)  {
+    else if (Now == 10 || Now == 14 || Now == 15 || Now == 23 || Now == 24 || Now == 42 || Now == 36 || Now == 66)  {
         att = document.createAttribute('readonly')
         vselect.setAttributeNode(att)
     }
@@ -190,6 +190,7 @@ function slcProjeto(){
             if(arrayOption[i].NOME == proj){
                 //console.log("é")
                 document.getElementById("codProjeto").value = arrayOption[i].CODCCUSTO
+                document.getElementById("txt_codprojeto").value = arrayOption[i].NOME
                 break;
             }
         }
@@ -255,7 +256,7 @@ function slcAcao(){
     
     /**************Bloqueia Campo Ação Baseado no Estado Atual****************/  
     
-    else if (Now == 10 || Now == 14 || Now == 15 || Now == 23 || Now == 24 || Now == 42 || Now == 36)  {
+    else if (Now == 10 || Now == 14 || Now == 15 || Now == 23 || Now == 24 || Now == 42 || Now == 36 || Now == 66)   {
         att = document.createAttribute('readonly')
         vselect.setAttributeNode(att)
     }
@@ -277,6 +278,7 @@ function slcAcao(){
             if(arrayOption[i].NOME == codAcao && arrayOption[i].CODIGO.split(".")[0] == codProjX ){
                 //console.log("é")
                 document.getElementById("codAcao").value = arrayOption[i].CODIGO
+                document.getElementById("txt_codacao").value = arrayOption[i].NOME
                 break;
             }
         }
@@ -354,7 +356,7 @@ function slcUnidade(){
     
   /**************Bloqueia Campo Unidade Baseado no Estado Atual****************/
     
-    else if (Now == 10 || Now == 14 || Now == 15 || Now == 23 || Now == 24 || Now == 42 || Now == 36)  {
+    else if (Now == 10 || Now == 14 || Now == 15 || Now == 23 || Now == 24 || Now == 42 || Now == 36 || Now == 66)  {
         att = document.createAttribute('readonly')
         vselect.setAttributeNode(att)
     }
