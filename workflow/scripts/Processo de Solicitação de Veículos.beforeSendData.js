@@ -42,8 +42,8 @@
 			customFields[28] = hAPI.getCardValue('');
 			customFields[29] = hAPI.getCardValue('');
 					
-			customFacts[0] = java.lang.Double.parseDouble(hAPI.getCardValue('totalDiarias')); // antes era qtDia
-			customFacts[1] = java.lang.Double.parseDouble(hAPI.getCardValue("numDiarias")); //numero de diarias carro alugado uso
+			customFacts[0] = java.lang.Double.parseDouble(hAPI.getCardValue('qtDia')); // Valor da Diária (R$)
+			customFacts[1] = java.lang.Double.parseDouble(hAPI.getCardValue("totalDiarias")); // Numero de Diaria (Num)
 			customFacts[2] = java.lang.Double.parseDouble(hAPI.getCardValue("diariaPesadoUso")); //
 			customFacts[3] = java.lang.Double.parseDouble(hAPI.getCardValue("numDiariaPesadoUso")); //
 			customFacts[4] = java.lang.Double.parseDouble(hAPI.getCardValue("gas"));  //
