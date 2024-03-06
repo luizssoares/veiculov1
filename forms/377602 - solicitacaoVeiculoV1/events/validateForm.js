@@ -45,13 +45,13 @@ function validateForm(form) {
 		 }
 		/* if(form.getValue("carroAlugado") == "") {
 			 msg += "\nPreencha o campo CARRO";
-			}
+			}*/
 		 if(form.getValue("dat_DataSaida") == "") {
 			 msg += "\nPreencha o campo DATA SAÍDA";
 			}
 		 if(form.getValue("dat_DataRetorno") == "") {
 			 msg += "\nPreencha o campo DATA RETORNO";
-			}*/
+			}
 	 }
 	 
 	 if(Now_State == 9 && escolhaPainel =="painelViagem2"){

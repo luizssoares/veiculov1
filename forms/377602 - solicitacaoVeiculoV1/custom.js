@@ -46,18 +46,21 @@ function controlePainelUso() {
 }
 
 
-function mostraPaineisUso() {
-    escolhaPainelUsoVariavel = document.getElementById("escolhaPainelUso").value;
+function mostraPaineisUso() { 
     var Now_State = window.parent.ECM.workflowView.sequence
+    var value = escolhaPainelUsoVariavel = document.getElementById("escolhaPainelUso").value;
+    var text = escolhaPainelUsoVariavel = document.getElementById("escolhaPainelUso").innerText;
+    //value = modo edição
+    //text = modo de visualização
     
-    if ( escolhaPainelUsoVariavel === "painelUso") {
+    if (value == "painelUso" || text == "Alugar Carro ou Pick-up") {
         document.getElementById("painelUso").style.display = "block";
         document.getElementById("painel_locadora").style.display = "block";
     } else {
         document.getElementById("painelUso").style.display = "none";
         document.getElementById("painel_locadora").style.display = "none";
     }
-    if ( escolhaPainelUsoVariavel === "painelUso2") {
+    if (value == "painelUso2" || text == "Alugar Van, Ônibus ou Micro Ônibus") {
         document.getElementById("painelUso2").style.display = "block";
         document.getElementById("painel_locadora2").style.display = "block";
     } else {
