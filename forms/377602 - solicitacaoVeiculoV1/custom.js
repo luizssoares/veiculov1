@@ -581,16 +581,39 @@ window.addEventListener("load", function() {
 
 
 
+/*********** ALERTA da CNH ******************/
 
+function validaCarteira() {
+    var hoje = new Date();
+    var val = new Date(document.getElementById("validadeCnh").value);
+    var hoje2 = hoje.getFullYear();
+    var validade = val.getFullYear();
 
+    if( validade < hoje2 ) {
+        alert("DATA DA CNH INVÁLIDA, INSIRA UMA DATA VÁLIDA");
+    }
+}
 
+document.getElementById("validadeCnh").addEventListener("blur", validaCarteira);
 
+/*********** ALERTA da Data Saída do aluguel e Retorno ******************/
 
+var alertaMostrado = false;
+function validaDataEHora() {
+    var dataHoraSaida = new Date(document.getElementById("dat_DataSaida").value).getDate();
+    var dataHoraRetorno = new Date(document.getElementById("dat_DataRetorno").value).getDate();
+    var hoje = new Date().getDate();
+    var amanha = new Date().getDate() + 1;
 
+    // Verifique se já mostrou o alerta
+    if (!alertaMostrado) {
+        if (dataHoraSaida == hoje || dataHoraSaida == amanha || dataHoraRetorno == hoje || dataHoraSaida == amanha) {
+            //console.log("%cNÃO É POSSÍVEL SOLICITAR UM VEÍCULO NA DATA DESEJADA, SOMENTE É POSSÍVEL APÓS 2 DIAS DO DIA ATUAL. POR GENTILEZA, ALTERE A DATA!", "color: red");
+            alert("NÃO É POSSÍVEL SOLICITAR UM VEÍCULO NA DATA DESEJADA, SOMENTE É POSSÍVEL APÓS 2 DIAS DO DIA ATUAL. POR GENTILEZA, ALTERE A DATA!");
+            alertaMostrado = true;
+        }
+    }
+}
 
-
-
-
-
-
-
+document.getElementById("dat_DataSaida").addEventListener("blur", validaDataEHora);
+document.getElementById("dat_DataRetorno").addEventListener("blur", validaDataEHora);

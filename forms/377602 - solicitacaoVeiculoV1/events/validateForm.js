@@ -43,9 +43,6 @@ function validateForm(form) {
 		 if(form.getValue("justificativa") == "") {
 			 msg += "\nPreencha o campo JUSTIFICATIVA";
 		 }
-		/* if(form.getValue("carroAlugado") == "") {
-			 msg += "\nPreencha o campo CARRO";
-			}*/
 		 if(form.getValue("dat_DataSaida") == "") {
 			 msg += "\nPreencha o campo DATA SAÍDA";
 			}
