@@ -1,13 +1,25 @@
 function validateForm(form) {
-	/*var Dhoje = form.getValue("dt_DataSolicit").split(' ')[0]; // 00/00/0000 25:85
-	var Dhoje2 = Dhoje.split('/');
-	var hoje = Dhoje2[2] + '-' + Dhoje2[1] + '-' + Dhoje2[0]
-	*/
 	 var escolhaPainelUso = form.getValue("escolhaPainelUso");
 	 var escolhaPainel = form.getValue("escolhaPainel");
 	 var Now_State = parseInt(getValue("WKNumState"));
 	 var escolhaUso = form.getValue("escolhaPainelUso");
 	 var msg = ""
+
+	 var dataHoraSaida = form.getValue("dat_DataSaida");
+	 var dHsaida = dataHoraSaida.split('T')[0]
+
+	 var hoje = new Date();
+	 var ano = hoje.getFullYear();
+	 var mes = ('0' + (hoje.getMonth() + 1)).slice(-2); 
+	 var dia = ('0' + hoje.getDate()).slice(-2); 
+	 var dhoje = ano + '-' + mes + '-' + dia
+
+	 var amanha = new Date(hoje);
+	 amanha.setDate(hoje.getDate() + 1);
+	 var anoA = amanha.getFullYear();
+	 var mesA = ('0' + (amanha.getMonth() + 1)).slice(-2); 
+	 var diaA = ('0' + amanha.getDate()).slice(-2);
+	 var damanha = anoA + '-' + mesA + '-' + diaA 
 		  
 	if(Now_State == 9) {
 		if(form.getValue("slc_projeto") == "") {
@@ -49,6 +61,12 @@ function validateForm(form) {
 		 if(form.getValue("dat_DataRetorno") == "") {
 			 msg += "\nPreencha o campo DATA RETORNO";
 			}
+		if(dhoje == dHsaida) {
+			 msg += "\n Você não pode solicitar um carro na data de HOJE!";
+			}
+		if(damanha == dHsaida) {
+			 msg += "\n Você não pode solicitar um carro na data de AMANHÃ!";
+			}		
 	 }
 	 
 	 if(Now_State == 9 && escolhaPainel =="painelViagem2"){
