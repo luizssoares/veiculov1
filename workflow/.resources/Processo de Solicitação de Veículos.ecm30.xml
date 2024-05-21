@@ -10,8 +10,8 @@
     <publicProcess>true</publicProcess>
     <volumeId>Default</volumeId>
     <categoryId></categoryId>
-    <managerEngineAllocationId>Grupo</managerEngineAllocationId>
-    <managerEngineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;publicGroup&lt;/Group&gt;&lt;/AssignmentController&gt;</managerEngineAllocationConfiguration>
+    <managerEngineAllocationId>Usuário</managerEngineAllocationId>
+    <managerEngineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;99990055&lt;/User&gt;&lt;/AssignmentController&gt;</managerEngineAllocationConfiguration>
     <snapshotFrequency>0</snapshotFrequency>
     <baseDay>0</baseDay>
     <baseMonth>0</baseMonth>
@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <version>42</version>
+      <version>43</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>377602</formId>
@@ -116,11 +116,11 @@
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <notifyRequisitionerDelay>true</notifyRequisitionerDelay>
       <allowanceAuthorityTime>3600</allowanceAuthorityTime>
       <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <allowanceRequisitionerTime>3600</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>3600</frequenceRequisitionerTime>
       <transferAttachments>false</transferAttachments>
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
@@ -131,7 +131,7 @@
       <positionY>30</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerFollowUp>true</notifyManagerFollowUp>
       <notifyManagerDelay>false</notifyManagerDelay>
       <allowanceManagerTime>0</allowanceManagerTime>
       <frequenceManagerTime>0</frequenceManagerTime>
@@ -690,7 +690,7 @@
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>42</version>
+        <version>43</version>
         <sequence>12</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -702,7 +702,7 @@
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
         <expressionOrder>2</expressionOrder>
-        <version>42</version>
+        <version>43</version>
         <sequence>12</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -714,7 +714,7 @@
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
         <expressionOrder>3</expressionOrder>
-        <version>42</version>
+        <version>43</version>
         <sequence>12</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -1211,7 +1211,7 @@ avalSelect = avaliação final&#xd;
       <height>307</height>
       <width>1161</width>
       <positionX>130</positionX>
-      <positionY>614</positionY>
+      <positionY>0</positionY>
       <stateName>Locadora de Veículos</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
@@ -1227,7 +1227,7 @@ avalSelect = avaliação final&#xd;
       <height>307</height>
       <width>1161</width>
       <positionX>130</positionX>
-      <positionY>307</positionY>
+      <positionY>614</positionY>
       <stateName>USO</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
@@ -1243,7 +1243,7 @@ avalSelect = avaliação final&#xd;
       <height>307</height>
       <width>1161</width>
       <positionX>130</positionX>
-      <positionY>0</positionY>
+      <positionY>307</positionY>
       <stateName>Demandante</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
@@ -1262,7 +1262,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>22</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1273,7 +1273,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>22</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1284,7 +1284,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>22</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -1295,7 +1295,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>29</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1306,7 +1306,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>29</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1317,7 +1317,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>29</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -1328,7 +1328,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>29</linkSequence>
         <bendSequence>4</bendSequence>
       </processLinkBendPK>
@@ -1339,7 +1339,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>29</linkSequence>
         <bendSequence>5</bendSequence>
       </processLinkBendPK>
@@ -1350,7 +1350,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>48</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1361,7 +1361,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>50</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1372,7 +1372,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>52</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1383,7 +1383,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>52</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1394,7 +1394,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>62</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1405,7 +1405,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>63</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1416,7 +1416,7 @@ avalSelect = avaliação final&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>Processo de Solicitação de Veículos</processId>
-        <version>42</version>
+        <version>43</version>
         <linkSequence>65</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1434,7 +1434,7 @@ avalSelect = avaliação final&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>42</processVersion>
+      <processVersion>43</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -1444,7 +1444,7 @@ avalSelect = avaliação final&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>42</processVersion>
+      <processVersion>43</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -1460,7 +1460,7 @@ avalSelect = avaliação final&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>42</processVersion>
+      <processVersion>43</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -1470,7 +1470,7 @@ avalSelect = avaliação final&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>42</processVersion>
+      <processVersion>43</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -1480,7 +1480,7 @@ avalSelect = avaliação final&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>Processo de Solicitação de Veículos</processId>
-      <processVersion>42</processVersion>
+      <processVersion>43</processVersion>
       <stateSequence>10</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>

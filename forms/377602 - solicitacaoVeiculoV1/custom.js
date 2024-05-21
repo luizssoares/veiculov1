@@ -542,7 +542,7 @@ var dataMinima = new Date(hoje);
 dataMinima.setHours(0, 0, 0, 0);
 
 var dataMinimaPosterior = new Date(dataMinima);
-dataMinimaPosterior.setHours(dataMinima.getHours() + 48);
+dataMinimaPosterior.setHours(dataMinima.getHours() + 72);
 
 var dataMinimaFormatada = formata(dataMinimaPosterior);
 
