@@ -530,7 +530,7 @@ function pad(valor) {
     return valor.toString().padStart(2, '0');
 } 
 
- function formata(data) {
+function formata(data) {
     return data.getFullYear() + '-' + pad(data.getMonth() + 1) + '-' + pad(data.getDate())
            + 'T' + pad(data.getHours()) + ':' + pad(data.getMinutes());
 }
@@ -538,11 +538,16 @@ function pad(valor) {
 var hoje = new Date();
 
 var dataMinima = new Date(hoje);
-
 dataMinima.setHours(0, 0, 0, 0);
 
 var dataMinimaPosterior = new Date(dataMinima);
-dataMinimaPosterior.setHours(dataMinima.getHours() + 72);
+var diaDaSemana = dataMinima.getDay(); // 0 = Domingo, 1 = Segunda, ..., 5 = Sexta, 6 = Sábado
+
+if (diaDaSemana === 5) {
+    dataMinimaPosterior.setHours(dataMinima.getHours() + 96); 
+} else {
+    dataMinimaPosterior.setHours(dataMinima.getHours() + 72);
+}
 
 var dataMinimaFormatada = formata(dataMinimaPosterior);
 
@@ -556,8 +561,7 @@ window.addEventListener('load', function() {
     campo1.min = dataMinimaFormatada;    
     campo2.min = dataMinimaFormatada;
     campo3.min = dataMinimaFormatada;
-
-}); 
+});
 
 
 /*********** Soma o valor da diária solicitada + adição de diária ******************/
