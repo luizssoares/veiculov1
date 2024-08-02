@@ -62,6 +62,7 @@ function enableFields(form){
 		form.setEnabled("destinoMVO",false);
 		form.setEnabled("responsavel",false);
 		form.setEnabled("numTelefone",false);
+		form.setEnabled("justificativaUso",false);
 		
 	break;
 	

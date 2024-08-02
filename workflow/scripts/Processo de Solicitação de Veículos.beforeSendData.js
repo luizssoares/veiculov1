@@ -29,7 +29,7 @@
 			customFields[17] = hAPI.getCardValue('dataRetiradaFinal');
 			customFields[18] = hAPI.getCardValue('dataRetornoFinal');
 			customFields[19] = hAPI.getCardValue('placaLiberado');
-			customFields[20] = hAPI.getCardValue('');
+			customFields[20] = hAPI.getCardValue('numCartao');
 			
 			customFields[21] = hAPI.getCardValue('txt_codprojeto');
 			customFields[22] = hAPI.getCardValue('txt_codacao');
