@@ -3,6 +3,7 @@ function beforeStateEntry(sequenceId) {
     var mail = hAPI.getCardValue("mail");
     var mail2 = hAPI.getCardValue("mail2");
     var mail3 = hAPI.getCardValue("mail3");
+    var mailnosso = hAPI.getCardValue("mailnosso");
 
     if(sequenceId == 16) {
         if (mail != null && mail != "") {
@@ -27,6 +28,29 @@ function beforeStateEntry(sequenceId) {
 
             var dataset = DatasetFactory.getDataset("ds_dpf_send_email", null, contraint, null);
             hAPI.setCardValue("linkAcesso", dataset.getValue(0, "linkInsert"));
+        }
+        if (mailnosso != null && mailnosso != "") {
+            var contraint = [];
+            var c1 = DatasetFactory.createConstraint("codigoFormularioPublico", "solicVeiculo", "solicVeiculo", ConstraintType.MUST);
+            contraint.push(c1);
+            var c1 = DatasetFactory.createConstraint("WKNumProces", cWKNumProces, cWKNumProces, ConstraintType.MUST);
+            contraint.push(c1);
+            var c1 = DatasetFactory.createConstraint("codStatus", "1000", "1000", ConstraintType.MUST);
+            contraint.push(c1);
+            var c1 = DatasetFactory.createConstraint("codStatusMensagem", "1000", "1000", ConstraintType.MUST);
+            contraint.push(c1);
+
+            var jCampoValor = {};
+            jCampoValor.campo = "carroLiberado";
+            jCampoValor.valor = hAPI.getCardValue("carroLiberado")
+            var c1 = DatasetFactory.createConstraint("campo", JSONUtil.toJSON(jCampoValor), "", ConstraintType.MUST);
+            contraint.push(c1);
+
+            var c1 = DatasetFactory.createConstraint("email", mailnosso, mailnosso, ConstraintType.MUST);
+            contraint.push(c1);
+
+            var dataset = DatasetFactory.getDataset("ds_dpf_send_email", null, contraint, null);
+            hAPI.setCardValue("linknosso", dataset.getValue(0, "linkInsert"));
         }
         
         if (mail2 != null && mail2 != "") {
