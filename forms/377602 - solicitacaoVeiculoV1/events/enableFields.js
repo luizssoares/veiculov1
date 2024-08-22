@@ -33,6 +33,7 @@ function enableFields(form){
 		form.setEnabled("destinoMVO",false);
 		form.setEnabled("responsavel",false);
 		form.setEnabled("numTelefone",false);
+		form.setEnabled("quantidadeDeVMO",false);
 		
 	break;
 	
@@ -63,6 +64,7 @@ function enableFields(form){
 		form.setEnabled("responsavel",false);
 		form.setEnabled("numTelefone",false);
 		form.setEnabled("justificativaUso",false);
+		form.setEnabled("quantidadeDeVMO",false);
 		
 	break;
 	

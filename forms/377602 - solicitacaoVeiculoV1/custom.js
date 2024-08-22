@@ -271,7 +271,7 @@ function atualizarResultado2() {
     );
     const valorTotal = calcularValorTotal2();
     const resultadoDiv = document.getElementById("resultado2");
-    resultadoDiv.innerHTML = `Diárias: ${diferenca} dias | Valor Total do Aluguel: R$ ${valorTotal.toFixed(3)}`;
+    resultadoDiv.innerHTML = `Diárias: ${diferenca} dias | Valor Total do Aluguel R$ ${valorTotal.toFixed(3)} (Valor por Unidade)`;
 
 }
 

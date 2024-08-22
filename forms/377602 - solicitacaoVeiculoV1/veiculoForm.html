@@ -212,13 +212,13 @@
 				    </div>
 					    <div class="panel-body">
 					        <div class="form-group row">
-					            <div class="col-md-5">
+					            <div class="col-md-3">
 					                <label for="escolhaPainel">Escolha o tipo de veículo:</label>
 					                <span class="required text-danger">
 						                    <strong>*</strong>
 						                </span>
 					                <div>
-					                    <select name="escolhaPainel" id="escolhaPainel">
+					                    <select name="escolhaPainel" id="escolhaPainel" class="form-control">
 					                        <option value="">Selecione</option>
 					                        <option value="painelViagem">Alugar Carro ou Pick-up</option>
 					                        <option value="painelViagem2">Alugar Micro-ônibus, Van ou Ônibus</option>
@@ -435,11 +435,11 @@
 			    </div>
 			    <div class="panel-body">
 			        <div class="form-group row">										
-			            <div class="col-md-5">
+			            <div class="col-md-2">
 			                <label for="carropesado">Selecione o tipo de veículo</label>
 			                <span class="required text-danger"></span>
 			                <div>
-			                    <select name="carropesado" id="carropesado">
+			                    <select name="carropesado" id="carropesado" class="form-control">
 			                        <option value="">Selecione</option>
 			                        <option value="van">Van</option>
 			                        <option value="micro">Micro-ônibus</option>
@@ -448,6 +448,11 @@
 			                    </select>
 			                </div>
 			            </div>
+						<div class="col-md-2">
+							<label for="quantidadeDeVMO">Unidades</label>
+							<input type="text" id="quantidadeDeVMO" name="quantidadeDeVMO" 
+							class="form-control" placeholder="Quantidade de veículos necessários">
+						</div>
 			        </div>		       			      			       			        			        
 			        <div class="form-group row" id="vanCampos" >
 			            <div class="col-md-2">
@@ -456,8 +461,9 @@
 			             </div>
 			             <div class="col-md-2">
 			                <label>Diária da Van</label>
-			                <div>
-			                    R$ <input type="text" name="tipoDiariaVan" id="tipoDiariaVan" readonly>
+			                <div class="input-group">
+								<span class="input-group-addon">R$</span>
+			                    <input type="text" name="tipoDiariaVan" id="tipoDiariaVan" class="form-control" readonly>
 			                </div>
 			            </div>
 			          </div>
@@ -469,8 +475,9 @@
 			             </div>
 			             <div class="col-md-2">
 			                <label for="tipoDiariaMicro">Diária do Micro-ônibus</label>
-			                <div>
-			                    R$ <input type="text" name="tipoDiariaMicro" id="tipoDiariaMicro" readonly>
+			                <div class="input-group">
+			                    <span class="input-group-addon">R$</span>
+								<input type="text" name="tipoDiariaMicro" id="tipoDiariaMicro" class="form-control" readonly>
 			                </div>
 			            </div>
 			          </div> 
@@ -482,8 +489,9 @@
 			             </div>
 			             <div class="col-md-2">
 			                <label for="tipoDiariaOnibusL">Diária do Ônibus Leito</label>
-			                <div>
-			                    R$ <input type="text" name="tipoDiariaOnibusL" id="tipoDiariaOnibusL" readonly>
+			                <div class="input-group">
+			                    <span class="input-group-addon">R$</span>
+								<input type="text" name="tipoDiariaOnibusL" id="tipoDiariaOnibusL" class="form-control" readonly>
 			                </div>
 			            </div>
 			          </div> 
@@ -495,8 +503,9 @@
 			             </div>
 			             <div class="col-md-2">
 			                <label for="tipoDiariaOnibusSL">Diária do Ônibus Semi Leito</label>
-			                <div>
-			                    R$ <input type="text" name="tipoDiariaOnibusSL" id="tipoDiariaOnibusSL" readonly>
+			                <div class="input-group">
+			                    <span class="input-group-addon">R$</span>
+								<input type="text" name="tipoDiariaOnibusSL" id="tipoDiariaOnibusSL" class="form-control" readonly>
 			                </div>
 			            </div>
 			          </div>   		            
@@ -579,10 +588,10 @@
 				    </div>
 				    <div class="panel-body">
 				        <div class="form-group row">
-				            <div class="col-md-5">
+				            <div class="col-md-3">
 				                <label for="escolhaPainelUso">Escolha o tipo de aluguel solicitado:</label>
 				                <div>
-				                    <select name="escolhaPainelUso" id="escolhaPainelUso">
+				                    <select name="escolhaPainelUso" id="escolhaPainelUso" class="form-control">
 				                        <option value="">Selecione</option>
 				                        <option value="painelUso">Alugar Carro ou Pick-up</option>
 				                        <option value="painelUso2">Alugar Van, Ônibus ou Micro Ônibus</option>
@@ -613,9 +622,9 @@
 												<input type="text" name="diariaPesadoUso" id="diariaPesadoUso" class="form-control" readonly>
 											</div>
 											<div class="form-group col-md-2">
-												<label for="numDiariaPesadoUso">Número de Diárias:</label>
-												<input type="text" name="numDiariaPesadoUso" id="numDiariaPesadoUso" class="form-control">
-											</div>
+												<label for="unidadesSolicitadas">Unidades Solicitadas:</label>
+												<input type="text" name="unidadesSolicitadas" id="unidadesSolicitadas" class="form-control" readonly>
+											</div>	
 											<div class="form-group col-md-2">
 												<label for="lugarPesadoUso">Lugar:</label>
 												<input type="text" name="lugarPesadoUso" id="lugarPesadoUso" class="form-control" readonly>
@@ -632,18 +641,16 @@
 									<div class="row">	
 										<div class="form-group col-md-3">
 											<label for="responsavelUso">Responsável:</label>
-											<span class="required text-danger">
-												<strong>*</strong>
-											</span>
 											<input type="text" name="responsavelUso" id="responsavelUso" class="form-control" readonly>
 										</div>										
 										<div class="form-group col-md-2">
 											<label for="numTelefoneUso">Nº Telefone:</label>
-												<span class="required text-danger">
-												<strong>*</strong>
-												</span>
 											<input type="text" name="numTelefoneUso" id="numTelefoneUso" class="form-control" readonly>
-										</div>									
+										</div>
+										<div class="form-group col-md-2">
+											<label for="numDiariaPesadoUso">Número de Diárias:</label>
+											<input type="text" name="numDiariaPesadoUso" id="numDiariaPesadoUso" class="form-control">
+										</div>
 									</div>
 									<div class="row">
 										 <div class="col-md-2">
@@ -1272,6 +1279,7 @@
 					    var valorResponsavel = document.getElementById("responsavel").value;
 					    var valorTelefone = document.getElementById("numTelefone").value;
 					    var numeroMyWeb = document.getElementById("processoUso").value;		
+					    var unidadesVmo = document.getElementById("quantidadeDeVMO").value;		
 
 					    document.getElementById("condutorUSO").value = valorCondutor;
 					    document.getElementById("numCnhUSO").value = valorCnh;
@@ -1286,6 +1294,7 @@
 						document.getElementById("numTelefoneUso").value = valorTelefone;
 						document.getElementById("numMyweb").value = numeroMyWeb;
 						document.getElementById("numMyweb2").value = numeroMyWeb;
+						document.getElementById("unidadesSolicitadas").value = unidadesVmo;
 					    
  						/////////////////////////////////////////////////////////////			
 					  	
